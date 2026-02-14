@@ -1,0 +1,36 @@
+{
+	"timestamp": "2026-02-14T08:59:45.358Z",
+	"baseUrl": "http://localhost:5173",
+	"results": [
+		{
+			"page": "Homepage",
+			"success": true,
+			"notes": "Loaded"
+		},
+		{
+			"page": "Commercial Video",
+			"success": true,
+			"notes": "Loaded, 40 video thumbnails"
+		},
+		{
+			"page": "Resume",
+			"success": true,
+			"notes": "Loaded"
+		},
+		{
+			"page": "Contact Me",
+			"success": true,
+			"notes": "Loaded"
+		},
+		{
+			"page": "Entertainment",
+			"success": true,
+			"notes": "Loaded, 9 video thumbnails"
+		}
+	],
+	"summary": {
+		"navigationWorks": true,
+		"pagesLoaded": 5,
+		"totalPages": 5
+	}
+}

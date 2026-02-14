@@ -1,0 +1,70 @@
+<script lang="ts">
+	import type { Video } from '$lib/data/videos';
+
+	let { video }: { video: Video } = $props();
+
+	let playing = $state(false);
+	let thumbFailed = $state(false);
+
+	function embedUrl(): string {
+		if (video.source === 'vimeo') {
+			return `https://player.vimeo.com/video/${video.id}?autoplay=1&title=0&byline=0&portrait=0`;
+		}
+		return `https://www.youtube.com/embed/${video.id}?autoplay=1&rel=0`;
+	}
+
+	function thumbnailUrl(): string {
+		if (video.source === 'youtube') {
+			return `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
+		}
+		return `https://vumbnail.com/${video.id}.jpg`;
+	}
+</script>
+
+<div class="group relative aspect-video w-full overflow-hidden rounded bg-neutral-800">
+	{#if playing}
+		<iframe
+			src={embedUrl()}
+			class="absolute inset-0 h-full w-full"
+			frameborder="0"
+			allow="autoplay; fullscreen; picture-in-picture"
+			allowfullscreen
+			title={video.title ?? `${video.source} video ${video.id}`}
+		></iframe>
+	{:else}
+		<button
+			onclick={() => (playing = true)}
+			class="absolute inset-0 flex h-full w-full cursor-pointer items-center justify-center border-0 bg-neutral-800 p-0"
+			aria-label="Play video"
+		>
+			{#if thumbFailed}
+				<!-- Fallback placeholder when thumbnail can't load -->
+				<div class="flex h-full w-full items-center justify-center bg-neutral-700">
+					<div class="text-center">
+						<svg class="mx-auto h-12 w-12 text-neutral-400" fill="currentColor" viewBox="0 0 24 24">
+							<path d="M8 5v14l11-7z" />
+						</svg>
+						<span class="mt-2 block text-xs text-neutral-500">
+							{video.source === 'vimeo' ? 'Vimeo' : 'YouTube'}
+						</span>
+					</div>
+				</div>
+			{:else}
+				<img
+					src={thumbnailUrl()}
+					alt={video.title ?? 'Video thumbnail'}
+					class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+					loading="lazy"
+					onerror={() => (thumbFailed = true)}
+				/>
+			{/if}
+			<div
+				class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+			>
+				<svg class="h-16 w-16 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+					<path d="M8 5v14l11-7z" />
+				</svg>
+			</div>
+		</button>
+	{/if}
+</div>
