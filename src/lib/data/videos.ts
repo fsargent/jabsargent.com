@@ -1,4 +1,3 @@
-![1772897968632](image/videos/1772897968632.png);
 export type VideoSource = "vimeo" | "youtube";
 
 export interface Video {
