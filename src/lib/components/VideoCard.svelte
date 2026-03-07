@@ -35,66 +35,93 @@
 	}
 </script>
 
-<div class="group relative w-full overflow-hidden rounded bg-neutral-800" style={`aspect-ratio: ${aspectRatio};`}>
-	{#if playing}
-		{#if video.source === 'vimeo'}
-			<video
-				class="absolute inset-0 h-full w-full bg-black object-contain"
-				src={`/media/videos/${video.id}.mp4`}
-				controls
-				autoplay
-				playsinline
-				preload="metadata"
-				onloadedmetadata={handleVideoLoaded}
-			>
-				<!-- Captions can be added later; keep a11y tooling happy for now. -->
-				<track kind="captions" />
-			</video>
-		{:else}
-			<iframe
-				src={embedUrl()}
-				class="absolute inset-0 h-full w-full"
-				frameborder="0"
-				allow="autoplay; fullscreen; picture-in-picture"
-				allowfullscreen
-				title={video.title ?? `${video.source} video ${video.id}`}
-			></iframe>
-		{/if}
-	{:else}
-		<button
-			onclick={() => (playing = true)}
-			class="absolute inset-0 flex h-full w-full cursor-pointer items-center justify-center border-0 bg-neutral-800 p-0"
-			aria-label="Play video"
-		>
-			{#if thumbFailed}
-				<!-- Fallback placeholder when thumbnail can't load -->
-				<div class="flex h-full w-full items-center justify-center bg-neutral-700">
-					<div class="text-center">
-						<svg class="mx-auto h-12 w-12 text-neutral-400" fill="currentColor" viewBox="0 0 24 24">
-							<path d="M8 5v14l11-7z" />
-						</svg>
-						<span class="mt-2 block text-xs text-neutral-500">
-							{video.source === 'vimeo' ? 'Vimeo' : 'YouTube'}
-						</span>
-					</div>
-				</div>
+<div class="space-y-2" id={`video-${video.source}-${video.id}`}>
+	<div class="group relative w-full overflow-hidden rounded bg-neutral-800" style={`aspect-ratio: ${aspectRatio};`}>
+		{#if playing}
+			{#if video.source === 'vimeo'}
+				<video
+					class="absolute inset-0 h-full w-full bg-black object-contain"
+					src={`/media/videos/${video.id}.mp4`}
+					controls
+					autoplay
+					playsinline
+					preload="metadata"
+					onloadedmetadata={handleVideoLoaded}
+				>
+					<!-- Captions can be added later; keep a11y tooling happy for now. -->
+					<track kind="captions" />
+				</video>
 			{:else}
-				<img
-					src={thumbnailUrl()}
-					alt={video.title ?? 'Video thumbnail'}
-					class="h-full w-full object-contain"
-					loading="lazy"
-					onload={handleThumbLoad}
-					onerror={() => (thumbFailed = true)}
-				/>
+				<iframe
+					src={embedUrl()}
+					class="absolute inset-0 h-full w-full"
+					frameborder="0"
+					allow="autoplay; fullscreen; picture-in-picture"
+					allowfullscreen
+					title={video.title ?? `${video.source} video ${video.id}`}
+				></iframe>
 			{/if}
-			<div
-				class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+		{:else}
+			<button
+				onclick={() => (playing = true)}
+				class="absolute inset-0 flex h-full w-full cursor-pointer items-center justify-center border-0 bg-neutral-800 p-0"
+				aria-label="Play video"
 			>
-				<svg class="h-16 w-16 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
-					<path d="M8 5v14l11-7z" />
-				</svg>
+				{#if thumbFailed}
+					<!-- Fallback placeholder when thumbnail can't load -->
+					<div class="flex h-full w-full items-center justify-center bg-neutral-700">
+						<div class="text-center">
+							<svg class="mx-auto h-12 w-12 text-neutral-400" fill="currentColor" viewBox="0 0 24 24">
+								<path d="M8 5v14l11-7z" />
+							</svg>
+							<span class="mt-2 block text-xs text-neutral-500">
+								{video.source === 'vimeo' ? 'Vimeo' : 'YouTube'}
+							</span>
+						</div>
+					</div>
+				{:else}
+					<img
+						src={thumbnailUrl()}
+						alt={video.title ?? 'Video thumbnail'}
+						class="h-full w-full object-contain"
+						loading="lazy"
+						onload={handleThumbLoad}
+						onerror={() => (thumbFailed = true)}
+					/>
+				{/if}
+				<div
+					class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+				>
+					<svg class="h-16 w-16 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+						<path d="M8 5v14l11-7z" />
+					</svg>
+				</div>
+			</button>
+		{/if}
+	</div>
+
+	{#if video.title || video.client || video.resumeRole}
+		<div>
+			{#if video.title}
+				<p class="text-sm font-medium text-neutral-100">{video.title}</p>
+			{/if}
+			<div class="mt-1 flex flex-wrap gap-2 text-xs">
+				{#if video.client}
+					<span class="rounded bg-neutral-800 px-2 py-1 text-neutral-300">{video.client}</span>
+				{/if}
+				{#if video.resumeRole}
+					{#if video.resumeAnchor}
+						<a
+							class="rounded bg-neutral-800 px-2 py-1 text-neutral-300 underline decoration-neutral-600 underline-offset-2 hover:text-white"
+							href={`/resume#${video.resumeAnchor}`}
+						>
+							{video.resumeRole}
+						</a>
+					{:else}
+						<span class="rounded bg-neutral-800 px-2 py-1 text-neutral-300">{video.resumeRole}</span>
+					{/if}
+				{/if}
 			</div>
-		</button>
+		</div>
 	{/if}
 </div>
