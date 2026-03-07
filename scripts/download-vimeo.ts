@@ -16,12 +16,20 @@
  * Usage (browser cookies mode):
  *   bun scripts/download-vimeo.ts --cookies-from-browser chrome
  *   bun scripts/download-vimeo.ts --cookies-from-browser chrome --max 5
+ *   bun scripts/download-vimeo.ts --cookies-from-browser chrome --no-impersonate
+ *   bun scripts/download-vimeo.ts --cookies-from-browser chrome --only 123,456,789
  *
  * Notes:
  * - Do NOT paste cookies into chat or git; use --cookies-from-browser.
  */
 
-import { createWriteStream, existsSync, mkdirSync, readdirSync } from "node:fs";
+import {
+	createWriteStream,
+	existsSync,
+	mkdirSync,
+	readdirSync,
+	readFileSync,
+} from "node:fs";
 import { Readable } from "node:stream";
 import { pipeline } from "node:stream/promises";
 import { categories } from "../src/lib/data/videos";
@@ -40,6 +48,7 @@ interface VimeoDownloadFile {
 interface VimeoVideo {
 	uri?: string;
 	name?: string;
+	link?: string;
 	privacy?: unknown;
 	download?: VimeoDownloadFile[];
 }
@@ -49,6 +58,17 @@ const VIMEO_TOKEN = process.env.VIMEO_ACCESS_TOKEN;
 const ytDlpBin = "./.venv/bin/yt-dlp";
 const listOnly = process.argv.includes("--list-only");
 const idOnly = process.argv.includes("--id-only");
+const noImpersonate = process.argv.includes("--no-impersonate");
+const onlyIdx = process.argv.indexOf("--only");
+const onlyIds =
+	onlyIdx >= 0
+		? new Set(
+				(process.argv[onlyIdx + 1] ?? "")
+					.split(",")
+					.map((s) => s.trim())
+					.filter(Boolean),
+			)
+		: undefined;
 const maxArgIdx = process.argv.indexOf("--max");
 const maxItems =
 	maxArgIdx >= 0 ? Number(process.argv[maxArgIdx + 1]) : undefined;
@@ -76,10 +96,15 @@ const orderedIds = cookiesFromBrowser
 	? [...vimeoIds].sort((a, b) => a.length - b.length || Number(a) - Number(b))
 	: vimeoIds;
 
+const filteredIds =
+	onlyIds && onlyIds.size > 0
+		? orderedIds.filter((id) => onlyIds.has(id))
+		: orderedIds;
+
 const targetIds =
 	Number.isFinite(maxItems) && maxItems && maxItems > 0
-		? orderedIds.slice(0, maxItems)
-		: orderedIds;
+		? filteredIds.slice(0, maxItems)
+		: filteredIds;
 
 console.log(
 	`Found ${vimeoIds.length} unique Vimeo IDs (${targetIds.length} targeted this run).\n`,
@@ -109,6 +134,39 @@ function findExistingMp4ForId(id: string): string | undefined {
 	}
 }
 
+function parseVimeoManageHtml(htmlPath: string): {
+	hashById: Map<string, string>;
+	titleById: Map<string, string>;
+} {
+	const hashById = new Map<string, string>();
+	const titleById = new Map<string, string>();
+	if (!existsSync(htmlPath)) return { hashById, titleById };
+
+	// Saved Vimeo "Manage videos" HTML includes rows like:
+	// href="/manage/videos/{id}/{hash}" ... data-testid="row-title" ... Title
+	const html = readFileSync(htmlPath, "utf8");
+	const rowRe =
+		/href="\/manage\/videos\/(\d+)\/([a-f0-9]+)"[\s\S]{0,2000}?data-testid="row-title"[\s\S]{0,500}?>\s*([^<\n\r]+?)\s*</g;
+	for (const match of html.matchAll(rowRe)) {
+		const id = match[1];
+		const hash = match[2];
+		const title = match[3]?.trim();
+		if (id && hash) hashById.set(id, hash);
+		if (id && title) titleById.set(id, title);
+	}
+	return { hashById, titleById };
+}
+
+// If present, this improves downloads for unlisted/private videos (avoids 403).
+const { hashById } = cookiesFromBrowser
+	? parseVimeoManageHtml("./vimeo.html")
+	: { hashById: new Map<string, string>() };
+if (cookiesFromBrowser && hashById.size > 0) {
+	console.log(
+		`Loaded ${hashById.size} unlisted hashes from ./vimeo.html (helps avoid 403).\n`,
+	);
+}
+
 async function downloadViaYtDlp(id: string, idx: number, total: number) {
 	if (!cookiesFromBrowser) {
 		throw new Error("Missing --cookies-from-browser <chrome|firefox|safari>");
@@ -119,8 +177,14 @@ async function downloadViaYtDlp(id: string, idx: number, total: number) {
 		);
 	}
 
-	// Use the vimeo player URL (works more often than vimeo.com/{id} for yt-dlp).
-	const url = `https://player.vimeo.com/video/${id}`;
+	// Prefer the unlisted share URL when available: https://vimeo.com/{id}/{hash}
+	// Many of these portfolio videos appear to be Unlisted and will 403 without the hash.
+	const hash = hashById.get(id);
+	const apiLink = hash ? undefined : await fetchLinkViaApi(id);
+	const url =
+		(hash && `https://vimeo.com/${id}/${hash}`) ||
+		apiLink ||
+		`https://player.vimeo.com/video/${id}`;
 
 	console.log(
 		`[download ${idx}/${total}] ${id} (yt-dlp cookies-from-browser: ${cookiesFromBrowser})`,
@@ -128,8 +192,7 @@ async function downloadViaYtDlp(id: string, idx: number, total: number) {
 	const args = [
 		"--cookies-from-browser",
 		cookiesFromBrowser,
-		"--impersonate",
-		"safari-18.4",
+		...(noImpersonate ? [] : ["--impersonate", "safari-18.4"]),
 		"--add-header",
 		"Referer:https://vimeo.com",
 		"-f",
@@ -177,7 +240,7 @@ async function fetchVideoMetadata(id: string): Promise<VimeoVideo> {
 			"Missing VIMEO_ACCESS_TOKEN in .env (required for API mode)",
 		);
 	}
-	const url = `https://api.vimeo.com/videos/${id}?fields=uri,name,privacy,download`;
+	const url = `https://api.vimeo.com/videos/${id}?fields=uri,name,link,privacy,download`;
 	const res = await fetch(url, {
 		headers: {
 			Authorization: `Bearer ${VIMEO_TOKEN}`,
@@ -191,6 +254,16 @@ async function fetchVideoMetadata(id: string): Promise<VimeoVideo> {
 	}
 
 	return (await res.json()) as VimeoVideo;
+}
+
+async function fetchLinkViaApi(id: string): Promise<string | undefined> {
+	if (!VIMEO_TOKEN) return undefined;
+	try {
+		const meta = await fetchVideoMetadata(id);
+		return meta.link;
+	} catch {
+		return undefined;
+	}
 }
 
 async function downloadFile(url: string, outPath: string) {

@@ -6,9 +6,10 @@
  *
  * Usage:
  *   bun scripts/generate-thumbnails.ts
+ *   bun scripts/generate-thumbnails.ts --overwrite
  *
  * Reads from ./downloads/videos/ and outputs to ./downloads/thumbnails/
- * Creates a 640x360 JPEG thumbnail from the 2-second mark of each video.
+ * Creates a JPEG thumbnail from the 2-second mark while preserving aspect ratio.
  */
 
 import { existsSync, mkdirSync, readdirSync } from "node:fs";
@@ -16,6 +17,7 @@ import { $ } from "bun";
 
 const VIDEO_DIR = "./downloads/videos";
 const THUMB_DIR = "./downloads/thumbnails";
+const overwrite = process.argv.includes("--overwrite");
 
 if (!existsSync(VIDEO_DIR)) {
 	console.error(`Video directory not found: ${VIDEO_DIR}`);
@@ -60,13 +62,14 @@ for (const file of videoFiles) {
 	seen.add(id);
 	const thumbPath = `${THUMB_DIR}/${id}.jpg`;
 
-	if (existsSync(thumbPath)) {
+	if (!overwrite && existsSync(thumbPath)) {
 		skipped++;
 		continue;
 	}
 
 	try {
-		await $`ffmpeg -i ${VIDEO_DIR}/${file} -ss 00:00:02 -vframes 1 -vf scale=640:360 -q:v 3 ${thumbPath} -y`.quiet();
+		// Preserve aspect ratio; set width to 720 and derive height automatically.
+		await $`ffmpeg -i ${VIDEO_DIR}/${file} -ss 00:00:02 -vframes 1 -vf scale=720:-2 -q:v 3 ${thumbPath} -y`.quiet();
 		generated++;
 		console.log(`[thumb] ${id}.jpg`);
 	} catch (e) {

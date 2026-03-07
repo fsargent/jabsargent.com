@@ -93,6 +93,18 @@ export const categories: Category[] = [
 		],
 	},
 	{
+		slug: "interactive-experiences",
+		title: "Agency - Interactive Experience",
+		description: `I'm bringing my experience in television, film, documentary and branded content to the agency side. As an Integrated Producer I manage print campaigns, contests, "surprise and delight" campaigns, websites, mailers and media kits and events for various brands.`,
+		videos: [
+			v("384843778"),
+			v("554996995"),
+			v("669577968"),
+			v("669577986"),
+			v("757761340"),
+		],
+	},
+	{
 		slug: "non-profit",
 		title: "Non-Profit",
 		description:

@@ -8,6 +8,7 @@
  *   bun scripts/upload-to-r2.ts
  *   bun scripts/upload-to-r2.ts --thumbnails-only
  *   bun scripts/upload-to-r2.ts --videos-only
+ *   bun scripts/upload-to-r2.ts --thumbnails-only --overwrite
  */
 
 import { readdirSync, readFileSync } from "node:fs";
@@ -41,6 +42,7 @@ const s3 = new S3Client({
 const thumbsOnly = process.argv.includes("--thumbnails-only");
 const videosOnly = process.argv.includes("--videos-only");
 const rawFilenames = process.argv.includes("--raw-filenames");
+const overwrite = process.argv.includes("--overwrite");
 
 function extractIdFromVideoFilename(file: string): string | undefined {
 	// Supports either "{id}.mp4" or "Some Title [id].mp4"
@@ -69,7 +71,7 @@ async function objectExists(key: string): Promise<boolean> {
 }
 
 async function uploadFile(localPath: string, key: string, contentType: string) {
-	if (await objectExists(key)) {
+	if (!overwrite && (await objectExists(key))) {
 		console.log(`[skip] ${key} - already exists`);
 		return;
 	}
@@ -118,7 +120,7 @@ async function uploadDir(
 			}
 			seen.add(key);
 
-			if (await objectExists(key)) {
+			if (!overwrite && (await objectExists(key))) {
 				skipped++;
 				console.log(`[skip] ${key} - already exists`);
 				continue;

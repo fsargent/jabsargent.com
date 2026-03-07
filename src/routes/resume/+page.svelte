@@ -7,120 +7,167 @@
 
 	<h2>Background</h2>
 	<p>
-		As an Executive Producer and Video Director with over 15 years of experience in New York and
-		California, I've produced and directed content for television, documentaries, digital media,
-		as well as advertising and marketing campaigns. I have guided numerous clients and creative
-		teams throughout the development and execution of best-in-class videos in support of their
-		goals.
+		Project and delivery lead with 15+ years managing end-to-end work: aligning stakeholders,
+		defining scope, building plans, managing budgets, and delivering on time with clear
+		communication. My background is in production, but the work has always been project
+		management and operational execution.
 	</p>
 	<p>
-		I have been responsible for leading teams and overseeing videos from development through
-		production and final delivery. I enjoy establishing clear pathways and channels of
-		communication across multiple stakeholders and teams to create a supportive and functional
-		production process.
+		Based in London and experienced across the US and UK, I'm actively moving out of media and
+		into an industry-agnostic project management role (PMO / operations / delivery) where calm,
+		repeatable processes matter.
 	</p>
+	<ul>
+		<li>Budgets managed: 30,000 - 800,000</li>
+		<li>Team sizes: 2 - 40 (cross-functional + vendors)</li>
+		<li>People management: direct manager for another producer (Edelman; Omnicom SF)</li>
+	</ul>
 
-	<h2>Skills & Experience</h2>
+	<h2>Role Focus</h2>
 	<ul>
 		<li>
-			Over 15 years of experience as a producer at major advertising and PR agencies and
-			commercial production companies.
+			Target roles: PMO Analyst, Project Coordinator, Junior Project Manager, Digital Project Manager,
+			Implementation Project Manager
+		</li>
+		<li>Target industries: finance/insurance, healthcare, public sector, utilities/energy, professional services</li>
+	</ul>
+
+	<h2>Project Management Strengths</h2>
+	<ul>
+		<li>
+			Delivery planning: intake, scoping, milestones, dependencies, delivery checklists, and
+			post-mortems.
 		</li>
 		<li>
-			Experience with commercial television, digital, and video and motion graphics production
-			and post-production.
+			Stakeholder management: align business leads, teams, finance, vendors, and clients with a
+			single source of truth.
 		</li>
 		<li>
-			Establish mutual partnership with creative teams during ideation, to support the
-			accounts' strategic and production goals.
+			Budgets and resourcing: forecasting, vendor SOWs, cost controls, and keeping delivery
+			realistic.
 		</li>
 		<li>
-			Lead production through all phases, ensuring projects exceed expectations, deliver on
-			message and within budget.
+			Risk and change management: flag issues early, propose options, and keep decisions moving.
 		</li>
 		<li>
-			Maintain relationships and in-depth knowledge of the production community, resources,
-			crew, and vendors.
+			Project reporting: status updates, decision logs, action items, and delivery readiness.
 		</li>
 		<li>
-			Motivate multidisciplinary teams and build relationships based on a natural leadership
-			style and servant-leadership philosophy.
+			Process improvement: establish simple workflows that reduce churn and keep teams focused.
 		</li>
 		<li>
-			Creative problem solver who thrives in complex scenarios. Ability to find consensus to
-			create the best work possible.
+			Vendor and partner management: sourcing, onboarding, timelines, and delivery QA.
 		</li>
+		<li>
+			Team leadership style: direct and calm; I look for clarity before speed.
+		</li>
+	</ul>
+
+	<h2>Tools</h2>
+	<ul>
+		<li>Smartsheet</li>
+		<li>Jira</li>
+		<li>Confluence</li>
+		<li>Google Sheets / spreadsheets (planning + budget tracking)</li>
+		<li>SharePoint</li>
+		<li>Frame.io</li>
 	</ul>
 
 	<hr />
 
-	<h2>Executive Producer @ Omnicom Studios <span class="text-neutral-400">| 2023 - Present</span></h2>
+	<h2>
+		Senior Integrated Producer (Project Lead) @ Omnicom Production (London)
+		<span class="text-neutral-400">| 2025 - Present</span>
+	</h2>
 	<p>
-		Advertising Producer responsible for executing TV first and social media video campaigns.
-		Source and manage external vendors, and liaise with business leads, creatives, strategists,
-		finance and clients. Direct and produce video series and maintain a high level of creative
-		and quality across all projects. Establish and communicate processes for successful
-		production and strategic vision.
+		Delivery lead coordinating internal teams and external partners from intake through final
+		delivery.
 	</p>
+	<ul>
+		<li>Run project kickoffs, timelines, status updates, and approvals across stakeholders.</li>
+		<li>Manage vendor selection, SOWs, schedules, and budgets; keep scope changes explicit.</li>
+		<li>Keep work on-brief, deliverable, and unblocked; drive decisions to closure.</li>
+	</ul>
 	<p class="text-sm text-neutral-400">
-		<strong>Clients:</strong> Energy Upgrade California, Car Gurus, Expedia, BMW, Blue Moon
+		<strong>Clients:</strong> Kenvue (Nicorette, OGX, Benylin)
 	</p>
 
-	<h2>Video Content Consultant/Video Director @ Freelance <span class="text-neutral-400">| 2023</span></h2>
+	<h2>Executive Producer (Project Lead) @ Parable (London) <span class="text-neutral-400">| 2025</span></h2>
 	<p>
-		Video Producer and Director working in marketing, communications and advertising. Writing,
-		Directing, Producing and Post Producing high quality content for brands. Specializing in
-		corporate storytelling and documentary-style production.
+		Project lead for campaign and communications development work. Owned brief intake, alignment,
+		and pitch/deck delivery.
 	</p>
 	<p class="text-sm text-neutral-400">
-		<strong>Clients:</strong> Cruise, REDF, Glass & Marker, Ernst & Young, The Big Picture,
-		Founder's Fun
+		<strong>Clients:</strong> Equinix, Cewe, Afreximbank, Kingfisher Beer, Spire
+	</p>
+
+	<h2>Executive Producer (Delivery Lead) @ Omnicom Studios (SF) <span class="text-neutral-400">| 2024 - 2025</span></h2>
+	<p>
+		Delivery lead responsible for executing projects and establishing process for reliable
+		delivery across teams.
+	</p>
+	<ul>
+		<li>Own schedules, budget tracking, and delivery coordination across internal teams and vendors.</li>
+		<li>Lead day-to-day client communication, status, and approvals to keep work moving.</li>
+		<li>Stand up repeatable workflows so projects stay predictable under tight timelines.</li>
+		<li>Directly managed another producer; coach delivery habits and unblock work.</li>
+	</ul>
+	<p class="text-sm text-neutral-400">
+		<strong>Clients:</strong> Energy Upgrade California, Car Gurus, Expedia, BMW, Blue Moon, Cheetos
+	</p>
+
+	<h2>Senior Integrated Producer (Project Lead) @ adam&amp;eveDDB <span class="text-neutral-400">| 2024</span></h2>
+	<p>
+		Project lead balancing resourcing, schedules, and delivery needs across stakeholders.
+	</p>
+
+	<h2>Project Lead (Content &amp; Communications) @ Freelance <span class="text-neutral-400">| 2023 - 2024</span></h2>
+	<p>
+		Delivered content and communications projects end-to-end. Day-to-day: planning, vendor
+		management, timelines, budgets, and final QA.
+	</p>
+	<p class="text-sm text-neutral-400">
+		<strong>Clients:</strong> Cruise, REDF, Glass & Marker, Ernst &amp; Young, The Big Picture, Founder's Fund
 	</p>
 
 	<h2>Executive Producer @ Edelman <span class="text-neutral-400">| 2019 - 2022</span></h2>
 	<p>
-		Agency EP responsible for executing social, broadcast, interactive, and earned media assets
-		for media campaigns, internal communications, and other outputs. Source and manage external
-		vendors, and liaise with account teams and client contacts. Direct and produce video series
-		and maintain a high level of creative and quality across all projects.
+		Agency EP delivering social, broadcast, interactive, and earned media assets for campaigns
+		and internal communications.
 	</p>
+	<ul>
+		<li>Translate briefs into scopes, plans, budgets, and vendor workflows.</li>
+		<li>Manage delivery across account teams and client contacts; keep approvals and handoffs tight.</li>
+		<li>Maintain quality bar while balancing speed, constraints, and shifting priorities.</li>
+		<li>Directly managed another producer; prioritize workload and keep deadlines realistic.</li>
+	</ul>
 	<p class="text-sm text-neutral-400">
-		<strong>Clients:</strong> Gordon & Betty Moore Foundation, Wu Tsai Human Performance Alliance,
-		Sacramento Department of Behavioral Health, Hologic, Gold Bond, Getaround, AbbVie,
-		Genentech, Jazz Pharmaceuticals, Allegra, eBay, Scholastic, PayPal, Eli Lilly, Dolby,
-		Microsoft, Taco Bell & TB Foundation, Adobe, DuPont, Starbucks
+		<strong>Clients:</strong> eBay, Scholastic, PayPal, Eli Lilly, Dolby, Microsoft, Taco Bell &amp; TB Foundation,
+		Adobe, DuPont, Starbucks, Gordon &amp; Betty Moore Foundation, Wu Tsai Human Performance Alliance,
+		Sacramento Department of Behavioral Health, Hologic, Gold Bond, Getaround, AbbVie, Genentech,
+		Jazz Pharmaceuticals, Allegra
 	</p>
 
 	<h2>Senior Producer/Director @ Brit + Co <span class="text-neutral-400">| 2018 - 2019</span></h2>
 	<p>
-		Produce and direct video content across the Brit + Co brand, including branded and social
-		platforms and the BUILD Brunch with Brit series. Responsible for idea generation, pitching,
-		development, script writing, production oversight and post production for multiple short-form
-		series focused on educating and inspiring creative, millennial women.
+		Owned multiple short-form series in parallel, coordinating ideation through delivery across
+		internal teams and brand partners.
 	</p>
 
-	<h2>Senior Digital Media Director/Producer @ Spacestation <span class="text-neutral-400">| 2016 - 2018</span></h2>
+	<h2>Senior Producer/Director @ Spacestation <span class="text-neutral-400">| 2016 - 2018</span></h2>
 	<p>
-		Responsible for overseeing award-winning digital series and branded media content from client
-		bid through finished project. Write scripts, outlines, breakdowns, and hotsheets, oversee
-		production schedules and budgets, build production crews, cast and prep talent, manage crews,
-		direct talent and crew on set, oversee post production and story, write voice over, book and
-		handle editors, colorists and audio mixers, as well as manage client expectations and
-		deadlines throughout project.
+		Oversaw digital series and branded work from bid through delivery: schedules, budgets,
+		resourcing, and partner management.
 	</p>
 	<p class="text-sm text-neutral-400">
-		<strong>Clients:</strong> Bravo, Craftsy / Bluprint, Dremel, 3Doodler, NBC / Today Show,
-		Bob's Red Mill, Food Network, Genius Kitchen, BBC America, IFC, Lipton, McCormick
+		<strong>Clients:</strong> Bravo, Craftsy / Bluprint, Dremel, 3Doodler, NBC / Today Show, Bob's Red Mill,
+		Food Network, Genius Kitchen, BBC America, IFC, Lipton, McCormick
 	</p>
 
 	<h2>TV Field Producer @ Freelance <span class="text-neutral-400">| 2009 - 2016</span></h2>
 	<p>
-		Produce award-winning unscripted television series from development through finished
-		project. Write scripts, outlines, breakdowns, and hotsheets, oversee production schedules
-		and budgets, build out production crews, run casting and prep talent, scout and book
-		locations, manage teams, direct talent and crew on set, manage post-production, write
-		voice-over and graphics copy, and execute against network notes and deadlines throughout the
-		project.
+		Produced award-winning unscripted series from development through delivery. Ran schedules,
+		budgets, resourcing, logistics, and stakeholder approvals under tight deadlines.
 	</p>
 	<p class="text-sm text-neutral-400">
 		<strong>Series / Networks:</strong> Buying Naked (TLC), The Tim Ferriss Experiment (Turner),
