@@ -1,6 +1,7 @@
 <script lang="ts">
 	import ResumeSwitcher from '$lib/components/ResumeSwitcher.svelte';
 	import ResumeClientList from '$lib/components/ResumeClientList.svelte';
+	import { clientSectionLinksByName } from '$lib/data/clients';
 
 	const companyLinks: Record<string, string> = {
 		'Omnicom Studios': 'https://www.omnicomproduction.com/',
@@ -8,23 +9,6 @@
 		'Brit + Co': 'https://www.brit.co/',
 		Spacestation: 'https://www.spacestation.com/',
 		'A&E Networks': 'https://www.aenetworks.com/'
-	};
-
-	const clientVideoLinks: Record<string, string> = {
-		AbbVie: '/commercial-video#video-vimeo-399330051',
-		Adobe: '/interactive-experiences#video-vimeo-554996995',
-		"Bob's Red Mill": '/industrials-educational#video-vimeo-290320081',
-		Dremel: '/social-media#video-vimeo-282565542',
-		'Energy Upgrade California': '/commercial-video#video-vimeo-1033195945',
-		Getaround: '/commercial-video#video-vimeo-555295542',
-		'Gordon & Betty Moore Foundation': '/commercial-video#video-vimeo-578584834',
-		HGTV: '/entertainment#video-vimeo-289188872',
-		Hologic: '/commercial-video#video-vimeo-548145222',
-		Lipton: '/food#video-vimeo-288823227',
-		PayPal: '/commercial-video#video-vimeo-578584641',
-		REDF: '/non-profit#video-vimeo-854446906',
-		'Sacramento Department of Behavioral Health': '/commercial-video#video-vimeo-744667202',
-		eBay: '/commercial-video#video-vimeo-782650321'
 	};
 
 	const omnicomClients = ['Energy Upgrade California', 'Car Gurus', 'Expedia', 'BMW', 'Blue Moon'];
@@ -140,7 +124,7 @@
 		production and strategic vision.
 	</p>
 	<p class="text-sm text-neutral-400">
-		<strong>Clients:</strong> <ResumeClientList clients={omnicomClients} {clientVideoLinks} />
+		<strong>Clients:</strong> <ResumeClientList clients={omnicomClients} clientLinks={clientSectionLinksByName} />
 	</p>
 
 	<h2 id="freelance-2023">
@@ -152,7 +136,8 @@
 		corporate storytelling and documentary-style production.
 	</p>
 	<p class="text-sm text-neutral-400">
-		<strong>Clients:</strong> <ResumeClientList clients={freelanceClients} {clientVideoLinks} />
+		<strong>Clients:</strong>
+		<ResumeClientList clients={freelanceClients} clientLinks={clientSectionLinksByName} />
 	</p>
 
 	<h2 id="edelman">
@@ -167,7 +152,7 @@
 		and maintain a high level of creative and quality across all projects.
 	</p>
 	<p class="text-sm text-neutral-400">
-		<strong>Clients:</strong> <ResumeClientList clients={edelmanClients} {clientVideoLinks} />
+		<strong>Clients:</strong> <ResumeClientList clients={edelmanClients} clientLinks={clientSectionLinksByName} />
 	</p>
 
 	<h2>
@@ -196,7 +181,8 @@
 		deadlines throughout project.
 	</p>
 	<p class="text-sm text-neutral-400">
-		<strong>Clients:</strong> <ResumeClientList clients={spacestationClients} {clientVideoLinks} />
+		<strong>Clients:</strong>
+		<ResumeClientList clients={spacestationClients} clientLinks={clientSectionLinksByName} />
 	</p>
 
 	<h2 id="tv-field-producer">TV Field Producer @ Freelance <span class="text-neutral-400">| 2009 - 2016</span></h2>
