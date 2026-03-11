@@ -1,5 +1,70 @@
 <script lang="ts">
 	import ResumeSwitcher from '$lib/components/ResumeSwitcher.svelte';
+	import ResumeClientList from '$lib/components/ResumeClientList.svelte';
+
+	const companyLinks: Record<string, string> = {
+		'Omnicom Studios': 'https://www.omnicomproduction.com/',
+		Edelman: 'https://www.edelman.com/',
+		'Brit + Co': 'https://www.brit.co/',
+		Spacestation: 'https://www.spacestation.com/',
+		'A&E Networks': 'https://www.aenetworks.com/'
+	};
+
+	const clientVideoLinks: Record<string, string> = {
+		AbbVie: '/commercial-video#video-vimeo-399330051',
+		Adobe: '/interactive-experiences#video-vimeo-554996995',
+		"Bob's Red Mill": '/industrials-educational#video-vimeo-290320081',
+		Dremel: '/social-media#video-vimeo-282565542',
+		'Energy Upgrade California': '/commercial-video#video-vimeo-1033195945',
+		Getaround: '/commercial-video#video-vimeo-555295542',
+		'Gordon & Betty Moore Foundation': '/commercial-video#video-vimeo-578584834',
+		HGTV: '/entertainment#video-vimeo-289188872',
+		Hologic: '/commercial-video#video-vimeo-548145222',
+		Lipton: '/food#video-vimeo-288823227',
+		PayPal: '/commercial-video#video-vimeo-578584641',
+		REDF: '/non-profit#video-vimeo-854446906',
+		'Sacramento Department of Behavioral Health': '/commercial-video#video-vimeo-744667202',
+		eBay: '/commercial-video#video-vimeo-782650321'
+	};
+
+	const omnicomClients = ['Energy Upgrade California', 'Car Gurus', 'Expedia', 'BMW', 'Blue Moon'];
+	const freelanceClients = ['Cruise', 'REDF', 'Glass & Marker', 'Ernst & Young', 'The Big Picture', "Founder's Fun"];
+	const edelmanClients = [
+		'Gordon & Betty Moore Foundation',
+		'Wu Tsai Human Performance Alliance',
+		'Sacramento Department of Behavioral Health',
+		'Hologic',
+		'Gold Bond',
+		'Getaround',
+		'AbbVie',
+		'Genentech',
+		'Jazz Pharmaceuticals',
+		'Allegra',
+		'eBay',
+		'Scholastic',
+		'PayPal',
+		'Eli Lilly',
+		'Dolby',
+		'Microsoft',
+		'Taco Bell & TB Foundation',
+		'Adobe',
+		'DuPont',
+		'Starbucks'
+	];
+	const spacestationClients = [
+		'Bravo',
+		'Craftsy / Bluprint',
+		'Dremel',
+		'3Doodler',
+		'NBC / Today Show',
+		"Bob's Red Mill",
+		'Food Network',
+		'Genius Kitchen',
+		'BBC America',
+		'IFC',
+		'Lipton',
+		'McCormick'
+	];
 </script>
 
 <svelte:head>
@@ -63,7 +128,9 @@
 	<hr />
 
 	<h2 id="omnicom-studios">
-		Executive Producer @ Omnicom Studios <span class="text-neutral-400">| 2023 - Present</span>
+		Executive Producer @
+		<a href={companyLinks['Omnicom Studios']} target="_blank" rel="noreferrer">Omnicom Studios</a>
+		<span class="text-neutral-400">| 2023 - Present</span>
 	</h2>
 	<p>
 		Advertising Producer responsible for executing TV first and social media video campaigns.
@@ -73,7 +140,7 @@
 		production and strategic vision.
 	</p>
 	<p class="text-sm text-neutral-400">
-		<strong>Clients:</strong> Energy Upgrade California, Car Gurus, Expedia, BMW, Blue Moon
+		<strong>Clients:</strong> <ResumeClientList clients={omnicomClients} {clientVideoLinks} />
 	</p>
 
 	<h2 id="freelance-2023">
@@ -85,11 +152,14 @@
 		corporate storytelling and documentary-style production.
 	</p>
 	<p class="text-sm text-neutral-400">
-		<strong>Clients:</strong> Cruise, REDF, Glass & Marker, Ernst & Young, The Big Picture,
-		Founder's Fun
+		<strong>Clients:</strong> <ResumeClientList clients={freelanceClients} {clientVideoLinks} />
 	</p>
 
-	<h2 id="edelman">Executive Producer @ Edelman <span class="text-neutral-400">| 2019 - 2022</span></h2>
+	<h2 id="edelman">
+		Executive Producer @
+		<a href={companyLinks.Edelman} target="_blank" rel="noreferrer">Edelman</a>
+		<span class="text-neutral-400">| 2019 - 2022</span>
+	</h2>
 	<p>
 		Agency EP responsible for executing social, broadcast, interactive, and earned media assets
 		for media campaigns, internal communications, and other outputs. Source and manage external
@@ -97,13 +167,14 @@
 		and maintain a high level of creative and quality across all projects.
 	</p>
 	<p class="text-sm text-neutral-400">
-		<strong>Clients:</strong> Gordon & Betty Moore Foundation, Wu Tsai Human Performance Alliance,
-		Sacramento Department of Behavioral Health, Hologic, Gold Bond, Getaround, AbbVie,
-		Genentech, Jazz Pharmaceuticals, Allegra, eBay, Scholastic, PayPal, Eli Lilly, Dolby,
-		Microsoft, Taco Bell & TB Foundation, Adobe, DuPont, Starbucks
+		<strong>Clients:</strong> <ResumeClientList clients={edelmanClients} {clientVideoLinks} />
 	</p>
 
-	<h2>Senior Producer/Director @ Brit + Co <span class="text-neutral-400">| 2018 - 2019</span></h2>
+	<h2>
+		Senior Producer/Director @
+		<a href={companyLinks['Brit + Co']} target="_blank" rel="noreferrer">Brit + Co</a>
+		<span class="text-neutral-400">| 2018 - 2019</span>
+	</h2>
 	<p>
 		Produce and direct video content across the Brit + Co brand, including branded and social
 		platforms and the BUILD Brunch with Brit series. Responsible for idea generation, pitching,
@@ -112,7 +183,9 @@
 	</p>
 
 	<h2 id="spacestation">
-		Senior Digital Media Director/Producer @ Spacestation <span class="text-neutral-400">| 2016 - 2018</span>
+		Senior Digital Media Director/Producer @
+		<a href={companyLinks.Spacestation} target="_blank" rel="noreferrer">Spacestation</a>
+		<span class="text-neutral-400">| 2016 - 2018</span>
 	</h2>
 	<p>
 		Responsible for overseeing award-winning digital series and branded media content from client
@@ -123,8 +196,7 @@
 		deadlines throughout project.
 	</p>
 	<p class="text-sm text-neutral-400">
-		<strong>Clients:</strong> Bravo, Craftsy / Bluprint, Dremel, 3Doodler, NBC / Today Show,
-		Bob's Red Mill, Food Network, Genius Kitchen, BBC America, IFC, Lipton, McCormick
+		<strong>Clients:</strong> <ResumeClientList clients={spacestationClients} {clientVideoLinks} />
 	</p>
 
 	<h2 id="tv-field-producer">TV Field Producer @ Freelance <span class="text-neutral-400">| 2009 - 2016</span></h2>
@@ -144,7 +216,11 @@
 		(FYI), The Fall of '87 (ESPN 30 for 30)
 	</p>
 
-	<h2>Programming & Development @ A&E Networks <span class="text-neutral-400">| 2010 - 2012</span></h2>
+	<h2>
+		Programming & Development @
+		<a href={companyLinks['A&E Networks']} target="_blank" rel="noreferrer">A&E Networks</a>
+		<span class="text-neutral-400">| 2010 - 2012</span>
+	</h2>
 	<p class="text-sm text-neutral-400">
 		<strong>Series:</strong> Russian Doll's, Roseanne's Nuts, Vanished with Beth Holloway, Hef's
 		Runaway Bride and Coming Home, Dance Moms, Abby's Ultimate Dance Competition, America's
