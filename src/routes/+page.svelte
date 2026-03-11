@@ -48,10 +48,10 @@
 	</div>
 
 	<div class="mb-12 text-center">
-		<h1 class="font-heading mb-4 text-5xl tracking-wide text-white uppercase md:text-6xl">
+		<h1 class="font-heading mb-4 text-3xl tracking-wide text-white uppercase sm:text-5xl md:text-6xl">
 			Jennifer Bronstein Sargent
 		</h1>
-		<p class="text-lg tracking-widest text-neutral-400 uppercase">
+		<p class="text-base tracking-[0.2em] text-neutral-400 uppercase sm:text-lg">
 			Director &middot; Producer &middot; Writer
 		</p>
 	</div>

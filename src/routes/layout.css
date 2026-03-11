@@ -18,3 +18,142 @@
 		min-height: 100vh;
 	}
 }
+
+.print-only {
+	display: none;
+}
+
+@media print {
+	@page {
+		size: letter;
+		margin: 0.4in;
+	}
+
+	html {
+		background-color: white;
+		color: black;
+	}
+
+	body {
+		background-color: white;
+		color: black;
+	}
+
+	.site-navigation,
+	.print-hidden {
+		display: none !important;
+	}
+
+	.site-shell {
+		display: block;
+		min-height: auto;
+	}
+
+	.site-main {
+		padding: 0.12in !important;
+	}
+
+	/* Make printable pages read like documents, not app screens. */
+	.site-main,
+	.site-main * {
+		color: #000 !important;
+		text-shadow: none !important;
+	}
+
+	.site-main .prose {
+		max-width: none !important;
+		margin: 0 !important;
+	}
+
+	.site-main .prose :where(h1, h2, h3, h4, strong, em, li, p, span, a) {
+		color: #000 !important;
+	}
+
+	.site-main .prose a {
+		text-decoration: none !important;
+	}
+
+	/* Resume-specific print typography and spacing. */
+	.resume-document {
+		font-family: var(--font-body), 'Helvetica Neue', Helvetica, sans-serif !important;
+		font-size: 12.5pt !important;
+		line-height: 1.45 !important;
+	}
+
+	.resume-document h1 {
+		margin: 0 0 0.16in 0 !important;
+		font-family: var(--font-heading), Arial, Helvetica, sans-serif !important;
+		font-size: 28pt !important;
+		line-height: 1.1 !important;
+		font-weight: 700 !important;
+		letter-spacing: 0.01em !important;
+		text-transform: uppercase !important;
+	}
+
+	.resume-document h2 {
+		margin: 0.17in 0 0.08in 0 !important;
+		font-size: 15.5pt !important;
+		line-height: 1.2 !important;
+		font-weight: 700 !important;
+		letter-spacing: 0 !important;
+		page-break-after: avoid;
+		break-after: avoid-page;
+	}
+
+	.resume-document h3 {
+		margin: 0.13in 0 0.05in 0 !important;
+		font-size: 13.5pt !important;
+		line-height: 1.25 !important;
+		font-weight: 700 !important;
+		page-break-after: avoid;
+		break-after: avoid-page;
+	}
+
+	.resume-document p {
+		margin: 0 0 0.085in 0 !important;
+		font-size: 12.5pt !important;
+		line-height: 1.45 !important;
+	}
+
+	.resume-document ul {
+		margin: 0.03in 0 0.09in 0.22in !important;
+		padding-left: 0.14in !important;
+	}
+
+	.resume-document li {
+		margin: 0 0 0.06in 0 !important;
+		font-size: 12.25pt !important;
+		line-height: 1.42 !important;
+	}
+
+	.resume-document hr {
+		margin: 0.12in 0 !important;
+		border-color: #999 !important;
+	}
+
+	.resume-document .print-only {
+		margin: 0 0 0.06in 0 !important;
+		font-size: 12.5pt !important;
+		font-weight: 700 !important;
+		letter-spacing: 0 !important;
+		text-transform: none !important;
+	}
+
+	.resume-document p,
+	.resume-document li {
+		orphans: 3;
+		widows: 3;
+	}
+
+	.resume-document li,
+	.resume-document p,
+	.resume-document h2,
+	.resume-document h3 {
+		page-break-inside: avoid;
+		break-inside: avoid-page;
+	}
+
+	.print-only {
+		display: block !important;
+	}
+}
