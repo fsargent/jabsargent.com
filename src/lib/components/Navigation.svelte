@@ -43,12 +43,12 @@
 	<div class="flex h-full flex-col p-5 sm:p-6">
 		<a
 			href="/"
-			class="mb-1 max-w-full px-[12.5px] py-px font-heading text-[28px] leading-7 tracking-normal text-white uppercase antialiased [text-rendering:optimizeLegibility]"
+			class="mb-1 max-w-full px-3 py-px font-heading text-[28px] leading-7 tracking-normal text-white uppercase antialiased [text-rendering:optimizeLegibility]"
 			onclick={closeMenu}
 		>
 			Jennifer Bronstein Sargent
 		</a>
-		<p class="mb-8 text-xs tracking-widest text-neutral-400 uppercase">
+		<p class="mb-8 px-3 text-xs tracking-widest text-neutral-400 uppercase">
 			Director &middot; Producer &middot; Writer
 		</p>
 
@@ -56,7 +56,7 @@
 			{#each primaryNav as item}
 				<a
 					href={item.href}
-					class="rounded px-3 py-2 text-sm transition-colors
+					class="block rounded px-3 py-2 text-sm transition-colors
 					{page.url.pathname === item.href
 						? 'bg-neutral-700 text-white'
 						: 'text-neutral-300 hover:bg-neutral-800 hover:text-white'}"
@@ -71,7 +71,7 @@
 			{#each secondaryNav as item}
 				<a
 					href={item.href}
-					class="rounded px-3 py-2 text-sm transition-colors
+					class="block rounded px-3 py-2 text-sm transition-colors
 					{page.url.pathname === item.href
 						? 'bg-neutral-700 text-white'
 						: 'text-neutral-300 hover:bg-neutral-800 hover:text-white'}"
@@ -82,14 +82,14 @@
 			{/each}
 		</div>
 
-		<div class="mt-4 text-xs text-neutral-500">
+		<div class="mt-4 px-3 text-xs text-neutral-500">
 			<p>jabsargent@gmail.com</p>
 			<p>London, UK</p>
 			<a
 				href="https://www.linkedin.com/in/jennifer-bronstein/"
 				target="_blank"
 				rel="noreferrer"
-				class="mt-3 inline-flex items-center gap-2 rounded px-2 py-1 text-neutral-400 transition-colors hover:text-white"
+				class="mt-3 inline-flex items-center gap-2 rounded py-1 text-neutral-400 transition-colors hover:text-white"
 				aria-label="Jennifer Bronstein on LinkedIn"
 			>
 				<svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
