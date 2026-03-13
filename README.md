@@ -1,6 +1,6 @@
 # jabsargent.com
 
-Portfolio site for Jennifer Bronstein Sargent — Director, Producer, Writer.
+Portfolio site for Jennifer Bronstein Sargent — Producer, Project Manager.
 
 Built with SvelteKit, Tailwind CSS, and deployed to Cloudflare Pages with video assets on Cloudflare R2.
 

@@ -4,8 +4,8 @@ export interface NavItem {
 }
 
 export const primaryNav: NavItem[] = [
-	{ label: "Resume", href: "/resume" },
-	{ label: "Clients", href: "/clients" },
+	{ label: "Production CV", href: "/resume" },
+	{ label: "Project Management CV", href: "/project-management-resume" },
 	{ label: "Commercial Video", href: "/commercial-video" },
 	{ label: "Interactive Experiences", href: "/interactive-experiences" },
 	{ label: "Social Media", href: "/social-media" },

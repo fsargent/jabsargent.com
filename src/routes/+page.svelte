@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { categories } from '$lib/data/videos';
 	import LandingCarousel from '$lib/components/LandingCarousel.svelte';
 
 	const landingSlides = [
@@ -39,7 +38,7 @@
 </script>
 
 <svelte:head>
-	<title>Jennifer Bronstein Sargent — Director, Producer, Writer</title>
+	<title>Jennifer Bronstein Sargent — Producer, Project Manager</title>
 </svelte:head>
 
 <div class="mx-auto max-w-4xl">
@@ -52,7 +51,7 @@
 			Jennifer Bronstein Sargent
 		</h1>
 		<p class="text-base tracking-[0.2em] text-neutral-400 uppercase sm:text-lg">
-			Director &middot; Producer &middot; Writer
+			Producer &middot; Project Manager
 		</p>
 	</div>
 
@@ -64,17 +63,4 @@
 		</p>
 	</div>
 
-	<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-		{#each categories as category}
-			<a
-				href="/{category.slug}"
-				class="group rounded-lg border border-neutral-700 p-6 transition-colors hover:border-neutral-500 hover:bg-neutral-800/50"
-			>
-				<h2 class="font-heading mb-2 text-lg text-white">{category.title}</h2>
-				<p class="text-sm text-neutral-400">
-					{category.videos.length} video{category.videos.length === 1 ? '' : 's'}
-				</p>
-			</a>
-		{/each}
-	</div>
 </div>

@@ -8,7 +8,7 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<meta name="description" content="Jennifer Bronstein Sargent — Director, Producer, Writer" />
+	<meta name="description" content="Jennifer Bronstein Sargent — Producer, Project Manager" />
 </svelte:head>
 
 <div class="site-shell flex min-h-screen flex-col xl:flex-row">

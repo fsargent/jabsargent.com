@@ -48,9 +48,11 @@
 		>
 			Jennifer Bronstein Sargent
 		</a>
-		<p class="mb-8 px-3 text-xs tracking-widest text-neutral-400 uppercase">
-			Director &middot; Producer &middot; Writer
-		</p>
+		<div class="mb-8 px-3">
+			<p class="text-xs tracking-widest text-neutral-400 uppercase">
+				Producer &middot; Project Manager
+			</p>
+		</div>
 
 		<div class="flex flex-1 flex-col gap-1">
 			{#each primaryNav as item}
