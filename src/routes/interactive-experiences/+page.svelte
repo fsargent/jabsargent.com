@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { tick } from 'svelte';
 	import VideoGrid from "$lib/components/VideoGrid.svelte";
 	import { getCategoryBySlug } from "$lib/data/videos";
 
@@ -52,13 +53,90 @@
 	];
 
 	let expandedImage = $state<ShowcaseImage | null>(null);
+	let lightboxRef = $state<HTMLDivElement | null>(null);
+	let lightboxCloseButtonRef = $state<HTMLButtonElement | null>(null);
+	let lastFocusedElement = $state<HTMLElement | null>(null);
+
+	function getLightboxFocusableElements(): HTMLElement[] {
+		if (!lightboxRef) return [];
+		return [...lightboxRef.querySelectorAll<HTMLElement>('button:not([disabled])')];
+	}
+
+	async function openImage(image: ShowcaseImage, event: MouseEvent) {
+		lastFocusedElement = event.currentTarget instanceof HTMLElement ? event.currentTarget : null;
+		expandedImage = image;
+		await tick();
+		lightboxCloseButtonRef?.focus();
+	}
+
+	function closeExpandedImage() {
+		expandedImage = null;
+		lastFocusedElement?.focus();
+		lastFocusedElement = null;
+	}
+
+	function handleLightboxKeydown(event: KeyboardEvent) {
+		if (!expandedImage) return;
+
+		if (event.key === 'Escape') {
+			event.preventDefault();
+			closeExpandedImage();
+			return;
+		}
+
+		if (event.key !== 'Tab') return;
+
+		const focusable = getLightboxFocusableElements();
+		if (focusable.length === 0) return;
+
+		const first = focusable[0];
+		const last = focusable[focusable.length - 1];
+		const active = document.activeElement;
+
+		if (event.shiftKey && active === first) {
+			event.preventDefault();
+			last.focus();
+		} else if (!event.shiftKey && active === last) {
+			event.preventDefault();
+			first.focus();
+		}
+	}
+
+	$effect(() => {
+		if (typeof document === 'undefined' || !expandedImage) return;
+
+		const previousOverflow = document.body.style.overflow;
+		document.body.style.overflow = 'hidden';
+
+		return () => {
+			document.body.style.overflow = previousOverflow;
+		};
+	});
+
+	$effect(() => {
+		if (typeof window === 'undefined') return;
+
+		window.dispatchEvent(
+			new CustomEvent('app-overlay-change', {
+				detail: { open: !!expandedImage }
+			})
+		);
+
+		return () => {
+			window.dispatchEvent(
+				new CustomEvent('app-overlay-change', {
+					detail: { open: false }
+				})
+			);
+		};
+	});
 </script>
 
 <svelte:head>
 	<title>{category.title} — Jennifer Bronstein Sargent</title>
 </svelte:head>
 
-<div class="mx-auto max-w-6xl">
+<div class="mx-auto max-w-6xl" aria-hidden={expandedImage ? 'true' : undefined} inert={!!expandedImage}>
 	<h1 class="font-heading mb-6 text-3xl tracking-wide text-white md:text-4xl">
 		{category.title}
 	</h1>
@@ -75,7 +153,7 @@
 				<button
 					type="button"
 					class="block w-full cursor-zoom-in"
-					onclick={() => (expandedImage = image)}
+					onclick={(event) => openImage(image, event)}
 					aria-label={`Expand image: ${image.alt}`}
 				>
 					<img
@@ -97,7 +175,7 @@
 				<button
 					type="button"
 					class="block w-full cursor-zoom-in"
-					onclick={() => (expandedImage = image)}
+					onclick={(event) => openImage(image, event)}
 					aria-label={`Expand image: ${image.alt}`}
 				>
 					<img
@@ -118,18 +196,27 @@
 </div>
 
 {#if expandedImage}
-	<div class="fixed inset-0 z-50 bg-black/90 p-4 md:p-8" role="dialog" aria-modal="true">
+	<div
+		bind:this={lightboxRef}
+		class="fixed inset-0 z-50 bg-black/90 p-4 md:p-8"
+		role="dialog"
+		aria-modal="true"
+		aria-labelledby="expanded-image-title"
+		tabindex="-1"
+		onkeydown={handleLightboxKeydown}
+	>
+		<h2 id="expanded-image-title" class="sr-only">{expandedImage.alt}</h2>
 		<button
 			type="button"
 			class="absolute inset-0 h-full w-full cursor-zoom-out"
-			onclick={() => (expandedImage = null)}
+			onclick={closeExpandedImage}
 			aria-label="Close expanded image"
 		></button>
 		<div class="relative z-10 mx-auto flex h-full max-w-7xl items-center justify-center">
 			<button
 				type="button"
 				class="cursor-zoom-out"
-				onclick={() => (expandedImage = null)}
+				onclick={closeExpandedImage}
 				aria-label="Close expanded image"
 			>
 				<img
@@ -139,9 +226,10 @@
 				/>
 			</button>
 			<button
+				bind:this={lightboxCloseButtonRef}
 				type="button"
-				class="absolute right-2 top-2 rounded bg-black/70 px-3 py-2 text-sm text-white hover:bg-black/85"
-				onclick={() => (expandedImage = null)}
+				class="absolute right-2 top-2 rounded bg-black/70 px-3 py-2 text-sm text-white hover:bg-black/85 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+				onclick={closeExpandedImage}
 				aria-label="Close expanded image"
 			>
 				Close

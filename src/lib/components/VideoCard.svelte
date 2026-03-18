@@ -7,6 +7,14 @@
 	let thumbFailed = $state(false);
 	let aspectRatio = $state(16 / 9);
 
+	function mediaName(): string {
+		return video.title?.trim() || video.client?.trim() || `${video.source} video`;
+	}
+
+	function playLabel(): string {
+		return `Play ${mediaName()}`;
+	}
+
 	function embedUrl(): string {
 		if (video.source === 'vimeo') {
 			return `https://player.vimeo.com/video/${video.id}?autoplay=1&title=0&byline=0&portrait=0`;
@@ -65,7 +73,7 @@
 			<button
 				onclick={() => (playing = true)}
 				class="absolute inset-0 flex h-full w-full cursor-pointer items-center justify-center border-0 bg-neutral-800 p-0"
-				aria-label="Play video"
+				aria-label={playLabel()}
 			>
 				{#if thumbFailed}
 					<!-- Fallback placeholder when thumbnail can't load -->
@@ -82,7 +90,7 @@
 				{:else}
 					<img
 						src={thumbnailUrl()}
-						alt={video.title ?? 'Video thumbnail'}
+						alt={`Thumbnail for ${mediaName()}`}
 						class="h-full w-full object-contain"
 						loading="lazy"
 						onload={handleThumbLoad}
@@ -101,24 +109,24 @@
 	</div>
 
 	{#if video.title || video.client || video.resumeRole}
-		<div>
+		<div class="min-w-0">
 			{#if video.title}
-				<p class="text-sm font-medium text-neutral-100">{video.title}</p>
+				<p class="break-words text-sm font-medium text-neutral-100">{video.title}</p>
 			{/if}
 			<div class="mt-1 flex flex-wrap gap-2 text-xs">
 				{#if video.client}
-					<span class="rounded bg-neutral-800 px-2 py-1 text-neutral-300">{video.client}</span>
+					<span class="rounded bg-neutral-800 px-2 py-1 text-neutral-300 break-words">{video.client}</span>
 				{/if}
 				{#if video.resumeRole}
 					{#if video.resumeAnchor}
 						<a
-							class="rounded bg-neutral-800 px-2 py-1 text-neutral-300 underline decoration-neutral-600 underline-offset-2 hover:text-white"
+							class="rounded bg-neutral-800 px-2 py-1 text-neutral-300 underline decoration-neutral-600 underline-offset-2 hover:text-white break-words"
 							href={`/resume#${video.resumeAnchor}`}
 						>
 							{video.resumeRole}
 						</a>
 					{:else}
-						<span class="rounded bg-neutral-800 px-2 py-1 text-neutral-300">{video.resumeRole}</span>
+						<span class="rounded bg-neutral-800 px-2 py-1 text-neutral-300 break-words">{video.resumeRole}</span>
 					{/if}
 				{/if}
 			</div>

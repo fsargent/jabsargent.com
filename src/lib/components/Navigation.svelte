@@ -1,12 +1,121 @@
 <script lang="ts">
+	import { tick } from 'svelte';
 	import { page } from '$app/state';
 	import { primaryNav, secondaryNav } from '$lib/data/navigation';
 
 	let menuOpen = $state(false);
+	let isDesktop = $state(false);
+	let externalOverlayOpen = $state(false);
+	let drawerRef = $state<HTMLDivElement | null>(null);
+	let lastFocusedElement = $state<HTMLElement | null>(null);
+
+	function getFocusableElements(): HTMLElement[] {
+		if (!drawerRef) return [];
+		return [...drawerRef.querySelectorAll<HTMLElement>('a[href], button:not([disabled])')];
+	}
+
+	async function openMenu() {
+		lastFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+		menuOpen = true;
+		await tick();
+		getFocusableElements()[0]?.focus();
+	}
+
+	function restoreFocus() {
+		lastFocusedElement?.focus();
+		lastFocusedElement = null;
+	}
 
 	function closeMenu() {
+		if (!menuOpen) return;
 		menuOpen = false;
+		restoreFocus();
 	}
+
+	function toggleMenu() {
+		if (menuOpen) {
+			closeMenu();
+			return;
+		}
+
+		void openMenu();
+	}
+
+	function syncDesktopState() {
+		isDesktop = window.matchMedia('(min-width: 1280px)').matches;
+		if (isDesktop) {
+			menuOpen = false;
+			lastFocusedElement = null;
+		}
+	}
+
+	function handleDrawerKeydown(event: KeyboardEvent) {
+		if (isDesktop || !menuOpen) return;
+
+		if (event.key === 'Escape') {
+			event.preventDefault();
+			closeMenu();
+			return;
+		}
+
+		if (event.key !== 'Tab') return;
+
+		const focusable = getFocusableElements();
+		if (focusable.length === 0) return;
+
+		const first = focusable[0];
+		const last = focusable[focusable.length - 1];
+		const active = document.activeElement;
+
+		if (event.shiftKey && active === first) {
+			event.preventDefault();
+			last.focus();
+		} else if (!event.shiftKey && active === last) {
+			event.preventDefault();
+			first.focus();
+		}
+	}
+
+	$effect(() => {
+		if (typeof window === 'undefined') return;
+
+		const mediaQuery = window.matchMedia('(min-width: 1280px)');
+		const update = () => syncDesktopState();
+		update();
+		mediaQuery.addEventListener('change', update);
+
+		return () => mediaQuery.removeEventListener('change', update);
+	});
+
+	$effect(() => {
+		if (typeof document === 'undefined' || isDesktop) return;
+
+		const previousOverflow = document.body.style.overflow;
+		if (menuOpen) {
+			document.body.style.overflow = 'hidden';
+		} else {
+			document.body.style.overflow = previousOverflow;
+		}
+
+		return () => {
+			document.body.style.overflow = previousOverflow;
+		};
+	});
+
+	$effect(() => {
+		if (typeof window === 'undefined') return;
+
+		const handleOverlayChange = (event: Event) => {
+			const customEvent = event as CustomEvent<{ open?: boolean }>;
+			externalOverlayOpen = !!customEvent.detail?.open;
+		};
+
+		window.addEventListener('app-overlay-change', handleOverlayChange as EventListener);
+
+		return () => {
+			window.removeEventListener('app-overlay-change', handleOverlayChange as EventListener);
+		};
+	});
 </script>
 
 <!-- Mobile header -->
@@ -18,9 +127,12 @@
 		Jennifer Bronstein Sargent
 	</a>
 	<button
-		onclick={() => (menuOpen = !menuOpen)}
-		class="shrink-0 text-white"
-		aria-label="Toggle navigation"
+		type="button"
+		onclick={toggleMenu}
+		class="inline-flex min-h-11 min-w-11 shrink-0 items-center justify-center rounded text-white hover:bg-neutral-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+		aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+		aria-expanded={menuOpen}
+		aria-controls="site-navigation-drawer"
 	>
 		{#if menuOpen}
 			<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -35,15 +147,25 @@
 </div>
 
 <!-- Sidebar / Mobile overlay -->
-<nav
+<div
+	id="site-navigation-drawer"
+	bind:this={drawerRef}
 	class="fixed inset-y-0 left-0 z-50 w-[85vw] max-w-80 overflow-y-auto border-r border-neutral-700 bg-neutral-900 transition-transform duration-300 xl:sticky xl:top-0 xl:h-screen xl:w-60 xl:max-w-none xl:translate-x-0 2xl:w-64
 	{menuOpen ? 'translate-x-0' : '-translate-x-full'}"
 	style="scrollbar-width: none;"
+	role={!isDesktop ? 'dialog' : undefined}
+	aria-modal={!isDesktop && menuOpen ? 'true' : undefined}
+	aria-hidden={externalOverlayOpen || (!isDesktop && !menuOpen) ? 'true' : undefined}
+	aria-labelledby={!isDesktop ? 'site-navigation-heading' : undefined}
+	inert={externalOverlayOpen || (!isDesktop && !menuOpen)}
+	onkeydown={handleDrawerKeydown}
 >
+	<nav aria-label="Site navigation">
 	<div class="flex h-full flex-col p-5 sm:p-6">
 		<a
 			href="/"
-			class="mb-1 max-w-full px-3 py-px font-heading text-[28px] leading-7 tracking-normal text-white uppercase antialiased [text-rendering:optimizeLegibility]"
+			id="site-navigation-heading"
+			class="mb-1 max-w-full px-3 py-1 font-heading text-[28px] leading-7 tracking-normal text-white uppercase antialiased [text-rendering:optimizeLegibility]"
 			onclick={closeMenu}
 		>
 			Jennifer Bronstein Sargent
@@ -58,7 +180,7 @@
 			{#each primaryNav as item}
 				<a
 					href={item.href}
-					class="block rounded px-3 py-2 text-sm transition-colors
+					class="block min-h-11 rounded px-3 py-3 text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white
 					{page.url.pathname === item.href
 						? 'bg-neutral-700 text-white'
 						: 'text-neutral-300 hover:bg-neutral-800 hover:text-white'}"
@@ -73,7 +195,7 @@
 			{#each secondaryNav as item}
 				<a
 					href={item.href}
-					class="block rounded px-3 py-2 text-sm transition-colors
+					class="block min-h-11 rounded px-3 py-3 text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white
 					{page.url.pathname === item.href
 						? 'bg-neutral-700 text-white'
 						: 'text-neutral-300 hover:bg-neutral-800 hover:text-white'}"
@@ -91,7 +213,7 @@
 				href="https://www.linkedin.com/in/jennifer-bronstein/"
 				target="_blank"
 				rel="noreferrer"
-				class="mt-3 inline-flex items-center gap-2 rounded py-1 text-neutral-400 transition-colors hover:text-white"
+				class="mt-3 inline-flex min-h-11 items-center gap-2 rounded py-2 text-neutral-400 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
 				aria-label="Jennifer Bronstein on LinkedIn"
 			>
 				<svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -103,7 +225,8 @@
 			</a>
 		</div>
 	</div>
-</nav>
+	</nav>
+</div>
 
 <style>
 	nav::-webkit-scrollbar {

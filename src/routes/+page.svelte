@@ -4,35 +4,35 @@
 	const landingSlides = [
 		{
 			src: '/landing/IMG_0362.jpg',
-			alt: 'Carousel image 1',
+			alt: 'Jennifer Bronstein Sargent seated beside a camera setup on set',
 		},
 		{
 			src: '/landing/IMG_0378.jpg',
-			alt: 'Carousel image 2',
+			alt: 'Production crew working around a camera rig during a live shoot',
 		},
 		{
 			src: '/landing/JOSEALVARADOJR_050_036.jpg',
-			alt: 'Carousel image 3',
+			alt: 'Jennifer Bronstein Sargent monitoring camera direction during filming',
 		},
 		{
 			src: '/landing/IMG_0945.jpeg',
-			alt: 'Carousel image 4',
+			alt: 'Outdoor production still with crew and equipment in motion',
 		},
 		{
 			src: '/landing/IMG_2481.JPG',
-			alt: 'Carousel image 5',
+			alt: 'Behind-the-scenes production image from a location shoot',
 		},
 		{
 			src: '/landing/IMG_1838.jpg',
-			alt: 'Carousel image 6',
+			alt: 'Jennifer Bronstein Sargent in conversation beside a production monitor',
 		},
 		{
 			src: '/landing/IMG_4766.jpg',
-			alt: 'Carousel image 7',
+			alt: 'Studio production setup with green screen and crew equipment',
 		},
 		{
 			src: '/landing/IMG_4639.jpg',
-			alt: 'Carousel image 8',
+			alt: 'Jennifer Bronstein Sargent coordinating a crew during a field production',
 		},
 	] as const;
 </script>

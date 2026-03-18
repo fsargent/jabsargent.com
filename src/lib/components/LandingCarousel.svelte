@@ -42,6 +42,11 @@
 		paused = !paused;
 	}
 
+	function slideLabel(slide: Slide, i: number) {
+		const fallback = `featured work slide ${i + 1}`;
+		return slide.alt?.trim() || fallback;
+	}
+
 	function withFormat(url: string, format: string) {
 		// Squarespace images support `?format=...` sizing. If the URL already has a query, append.
 		if (url.includes('?')) return `${url}&format=${encodeURIComponent(format)}`;
@@ -105,7 +110,7 @@
 		<div class="absolute inset-x-0 bottom-0 flex items-center justify-between gap-2 p-2">
 			<button
 				type="button"
-				class="pointer-events-auto inline-flex items-center justify-center rounded bg-black/50 px-3 py-2 text-sm text-white hover:bg-black/60 focus:outline-none focus:ring-2 focus:ring-white/30"
+				class="pointer-events-auto inline-flex min-h-11 min-w-11 items-center justify-center rounded bg-black/50 px-3 py-2 text-sm text-white hover:bg-black/60 focus:outline-none focus:ring-2 focus:ring-white/30"
 				onclick={prev}
 				aria-label="Previous slide"
 			>
@@ -124,7 +129,7 @@
 
 			<button
 				type="button"
-				class="pointer-events-auto inline-flex items-center justify-center rounded bg-black/50 px-3 py-2 text-sm text-white hover:bg-black/60 focus:outline-none focus:ring-2 focus:ring-white/30"
+				class="pointer-events-auto inline-flex min-h-11 min-w-11 items-center justify-center rounded bg-black/50 px-3 py-2 text-sm text-white hover:bg-black/60 focus:outline-none focus:ring-2 focus:ring-white/30"
 				onclick={togglePaused}
 				aria-label={paused ? 'Play slideshow' : 'Pause slideshow'}
 			>
@@ -146,7 +151,7 @@
 
 			<button
 				type="button"
-				class="pointer-events-auto inline-flex items-center justify-center rounded bg-black/50 px-3 py-2 text-sm text-white hover:bg-black/60 focus:outline-none focus:ring-2 focus:ring-white/30"
+				class="pointer-events-auto inline-flex min-h-11 min-w-11 items-center justify-center rounded bg-black/50 px-3 py-2 text-sm text-white hover:bg-black/60 focus:outline-none focus:ring-2 focus:ring-white/30"
 				onclick={next}
 				aria-label="Next slide"
 			>
@@ -169,8 +174,8 @@
 					class="relative h-16 w-24 flex-none overflow-hidden rounded border transition-colors
 					{i === index ? 'border-neutral-200' : 'border-neutral-700 hover:border-neutral-500'}"
 					onclick={() => goTo(i)}
-					aria-label={`Go to slide ${i + 1}`}
-					aria-current={i === index ? 'true' : 'false'}
+					aria-label={`Go to slide ${i + 1}: ${slideLabel(slide, i)}`}
+					aria-current={i === index ? 'true' : undefined}
 				>
 					<img
 						src={withFormat(slide.src, '300w')}
