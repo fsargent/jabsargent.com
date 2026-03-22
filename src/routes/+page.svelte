@@ -57,9 +57,9 @@
 
 	<div class="mb-12">
 		<p class="mx-auto max-w-2xl text-center text-neutral-300 leading-relaxed">
-			Executive Producer and Video Director with over 15 years of experience producing and
-			directing content for television, documentaries, digital media, advertising and marketing
-			campaigns.
+			Executive Producer and Video Director with over 15 years of experience in London, New York
+			and California producing and directing content for television, documentaries, digital media,
+			advertising and marketing campaigns.
 		</p>
 	</div>
 

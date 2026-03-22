@@ -306,7 +306,7 @@ const videoContextById: Record<
 	},
 	"854446906": {
 		client: "REDF",
-		resumeRole: "Video Consultant / Director (Freelance)",
+		resumeRole: "Video Producer/Director @ Freelance",
 		resumeAnchor: "freelance-2023",
 	},
 	"289188872": {
@@ -316,17 +316,17 @@ const videoContextById: Record<
 	},
 	"288823227": {
 		client: "Lipton",
-		resumeRole: "Senior Digital Media Director/Producer @ Spacestation",
+		resumeRole: "Senior Producer & Director @ Spacestation",
 		resumeAnchor: "spacestation",
 	},
 	"282565542": {
 		client: "Dremel",
-		resumeRole: "Senior Digital Media Director/Producer @ Spacestation",
+		resumeRole: "Senior Producer & Director @ Spacestation",
 		resumeAnchor: "spacestation",
 	},
 	"290320081": {
 		client: "Bob's Red Mill",
-		resumeRole: "Senior Digital Media Director/Producer @ Spacestation",
+		resumeRole: "Senior Producer & Director @ Spacestation",
 		resumeAnchor: "spacestation",
 	},
 };
