@@ -42,8 +42,11 @@
 		decisions moving to closure.
 	</li>
 	<li>
-		<strong>Process improvement:</strong> simple, repeatable workflows that reduce churn and
-		keep teams focused. Direct and calm — clarity before speed.
+		<strong>Process improvement:</strong> establish simple, repeatable workflows that reduce
+		churn and keep teams focused.
+	</li>
+	<li>
+		<strong>Team leadership:</strong> direct and calm; I look for clarity before speed.
 	</li>
 </ul>
 
@@ -120,13 +123,18 @@
 </p>
 
 <h2>
+	Senior Integrated Producer (Project Lead) @ adam&amp;eveDDB
+	<span class="text-neutral-400">| 2024</span>
+</h2>
+<p>Project lead who balanced resourcing, schedules, and delivery needs across stakeholders.</p>
+
+<h2>
 	Project Lead (Content &amp; Communications) @ Freelance
-	<span class="text-neutral-400">| 2023 - 2024</span>
+	<span class="text-neutral-400">| 2023</span>
 </h2>
 <p>
-	Delivered content and communications projects end-to-end: planning, vendor management,
-	timelines, budgets, and final QA. Includes a short-term Senior Integrated Producer engagement
-	at adam&amp;eveDDB.
+	Delivered content and communications projects end-to-end. Day-to-day: planning, vendor
+	management, timelines, budgets, and final QA.
 </p>
 <p class="text-sm text-neutral-400">
 	<strong>Clients:</strong> Cruise, REDF, Glass &amp; Marker, Ernst &amp; Young, The Big Picture,
@@ -145,9 +153,10 @@
 	<li>Line-managed another producer; prioritised workload and kept deadlines realistic.</li>
 </ul>
 <p class="text-sm text-neutral-400">
-	<strong>Selected clients:</strong> AbbVie, Genentech, Jazz Pharmaceuticals, Hologic, Sacramento
-	Department of Behavioral Health, Gordon &amp; Betty Moore Foundation, Microsoft, PayPal, eBay,
-	Adobe.
+	<strong>Clients:</strong> eBay, Scholastic, PayPal, Eli Lilly, Dolby, Microsoft, Taco Bell &amp; TB
+	Foundation, Adobe, DuPont, Starbucks, Gordon &amp; Betty Moore Foundation, Wu Tsai Human
+	Performance Alliance, Sacramento Department of Behavioral Health, Hologic, Gold Bond, Getaround,
+	AbbVie, Genentech, Jazz Pharmaceuticals, Allegra
 </p>
 
 <h2>Senior Producer/Director @ Brit + Co <span class="text-neutral-400">| 2018 - 2019</span></h2>
@@ -187,33 +196,37 @@
 </p>
 
 <h3>Earlier Roles</h3>
-<p class="text-sm text-neutral-400">
-	Festival Producer, Rendez-Vous with French Cinema at Lincoln Center (UniFrance USA, 2008-2010);
-	On-Air Strategic &amp; Media Planning (Nickelodeon/Viacom, 2010); Associate Producer/French
-	Fixer, <em>Blood, Sweat and Gears</em> (Sundance Channel, 2008); Entertainment Editor
-	(Screenrush.co.uk &amp; Allocin&eacute;.fr, 2008); earlier roles at Shakespeare Theatre of New
-	Jersey and Harper's Bazaar.
-</p>
+<ul>
+	<li>On-Air Strategic &amp; Media Planning @ Nickelodeon/Viacom (2010)</li>
+	<li>Festival Producer, Rendez-Vous with French Cinema at Lincoln Center @ UniFrance USA (2008-2010)</li>
+	<li>Entertainment Editor @ Screenrush.co.uk &amp; Allocin&eacute;.fr (2008)</li>
+	<li>
+		Associate Producer/French Fixer, <em>Blood, Sweat and Gears: Racing Clean to the Tour de
+		France</em> @ Sundance Channel (2008)
+	</li>
+	<li>Assistant to the Artistic Director @ Shakespeare Theatre of New Jersey (2006-2009)</li>
+	<li>Fashion Editorials Assistant @ Harper's Bazaar (2004-2005)</li>
+</ul>
 
 <hr />
 
 <h2>Awards</h2>
 <ul>
 	<li>
-		Emmy Award, Outstanding Creative Achievement in Interactive Media Multiplatform Storytelling
-		(2015) — <em>The Singles Project</em>, Bravo
-	</li>
-	<li>
-		Tribeca Film Festival, Spotlight Documentary (2017) — <em>The Year of the Scab</em>, ESPN 30
-		for 30
-	</li>
-	<li>
 		Cynopsis Short Form Video Festival Award (2018) — <em>Man Crafted</em> by Food Network &amp;
 		McCormick
 	</li>
 	<li>
-		New York Innovative Theatre Award nomination, Best Original Production (2016) —
+		Tribeca Film Festival - Spotlight Documentary (2017) — <em>The Year of the Scab</em>, ESPN 30
+		for 30
+	</li>
+	<li>
+		New York Innovative Theatre Award - Nominated, Best Original Production (2016) —
 		<em>Steel Birds</em> (director, EstroGenius Theatre Festival)
+	</li>
+	<li>
+		Emmy Award Outstanding Creative Achievement in Interactive Media Multiplatform Storytelling
+		(2015) — <em>The Singles Project</em>, Bravo
 	</li>
 </ul>
 

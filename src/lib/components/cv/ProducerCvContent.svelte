@@ -72,28 +72,36 @@
 
 <h2>Background</h2>
 <p>
-	Executive Producer and Video Director with over 15 years across London, New York, and
-	California, producing television, documentary, digital, and advertising work. I lead teams and
-	oversee videos from development through delivery, partnering with creatives during ideation and
-	keeping production focused, on-message, and on-budget.
+	Executive Producer and Video Director with over 15 years of experience in London, New York, and
+	California. I've produced and directed content for television, documentaries, digital media,
+	and advertising and marketing campaigns, guiding clients and creative teams through the
+	development and execution of high-impact videos that advance their goals.
+</p>
+<p>
+	I lead teams and oversee videos from development through production and delivery. I establish
+	clear communication channels across stakeholders and teams to keep production supportive and
+	efficient.
 </p>
 
-<h2>What I Bring</h2>
+<h2>Skills &amp; Experience</h2>
 <ul>
 	<li>
-		A deep production network — long-standing relationships with crews, vendors, and post houses
-		across the US and UK.
+		Over 15 years producing at major advertising agencies, PR agencies, and commercial production
+		companies, across commercial television, digital video, and motion-graphics production and
+		post-production.
 	</li>
 	<li>
-		Servant-leadership style that motivates multidisciplinary teams and builds trust under
-		pressure.
+		Partner with creative teams during ideation to support each account's strategic and
+		production goals; lead production through all phases on-message and on-budget.
 	</li>
 	<li>
-		Creative problem-solving in complex scenarios, with the consensus-building needed to land
-		the best possible work.
+		Maintain relationships across the production community and deep knowledge of resources,
+		crews, and vendors.
 	</li>
 	<li>
-		Range across commercial television, digital video, motion-graphics, and post-production.
+		Lead multidisciplinary teams through a servant-leadership approach that builds trust and
+		motivation, and solve creative problems in complex scenarios with the consensus-building
+		needed to drive the best possible work.
 	</li>
 </ul>
 
@@ -105,8 +113,9 @@
 	<span class="text-neutral-400">| 2026 - Present</span>
 </h2>
 <p>
-	Lead producer on TV-first and social campaigns for Iris's healthcare portfolio in London.
-	Brief-to-delivery ownership across creative, strategy, finance, and client teams.
+	Producer on TV-first and social-media video campaigns for Iris's healthcare portfolio in London.
+	Source and manage external vendors, and liaise with business leads, creatives, strategists,
+	finance, and clients.
 </p>
 <p class="text-sm text-neutral-400">
 	<strong>Clients:</strong>
@@ -119,9 +128,9 @@
 	<span class="text-neutral-400">| 2025 - 2026</span>
 </h2>
 <p>
-	Embedded producer on the Kenvue account, delivering integrated campaigns across a multi-brand
-	consumer-health portfolio. Managed concurrent productions and a roster of external partners
-	while balancing brand-team approvals across markets.
+	Producer on the Kenvue consumer-health portfolio, executing TV-first and social-media video
+	campaigns across a multi-brand account. Sourced and managed external vendors, and liaised with
+	business leads, creatives, strategists, finance, and clients.
 </p>
 <p class="text-sm text-neutral-400">
 	<strong>Clients:</strong>
@@ -202,9 +211,11 @@
 	<span class="text-neutral-400">| 2016 - 2018</span>
 </h2>
 <p>
-	Owned award-winning digital series and branded content from pitch through delivery — pitching
-	brand partners, directing on set, and shaping story in post. Cynopsis Short Form Video Festival
-	Award winner for <em>Man Crafted</em> (Food Network &amp; McCormick).
+	Oversaw award-winning digital series and branded content from pitch through delivery: wrote
+	scripts, outlines, breakdowns, and hotsheets; managed schedules and budgets; built and directed
+	production crews; cast and prepped talent; oversaw post-production and story; wrote voice-over;
+	booked and managed editors, colorists, and audio mixers; and managed client expectations and
+	deadlines throughout each project.
 </p>
 <p class="text-sm text-neutral-400">
 	<strong>Clients:</strong>
@@ -213,10 +224,11 @@
 
 <h2 id="tv-field-producer">TV Field Producer @ Freelance <span class="text-neutral-400">| 2009 - 2016</span></h2>
 <p>
-	Field-produced unscripted television for cable networks across reality, competition,
-	documentary, and lifestyle formats. Ran casting, locations, talent, and crew on set; cut against
-	network notes and tight delivery windows. Includes Tribeca Spotlight Documentary
-	<em>The Year of the Scab</em> (ESPN 30 for 30) and Emmy-winning <em>The Singles Project</em> (Bravo).
+	Produced award-winning unscripted television series from development through delivery: wrote
+	scripts, outlines, breakdowns, and hotsheets; managed schedules and budgets; built crews; ran
+	casting and prepped talent; scouted and booked locations; directed talent and crew on set;
+	managed post-production; wrote voice-over and graphics copy; and executed against network notes
+	and deadlines.
 </p>
 <p class="text-sm text-neutral-400">
 	<strong>Series / Networks:</strong> Car Hunters (History Channel), Island Life (HGTV), Beat Bobby
@@ -238,33 +250,37 @@
 </p>
 
 <h3>Earlier Roles</h3>
-<p class="text-sm text-neutral-400">
-	Festival Producer, Rendez-Vous with French Cinema at Lincoln Center (UniFrance USA, 2008-2010);
-	On-Air Strategic &amp; Media Planning (Nickelodeon/Viacom, 2010); Associate Producer/French
-	Fixer, <em>Blood, Sweat and Gears</em> (Sundance Channel, 2008); Entertainment Editor
-	(Screenrush.co.uk &amp; Allocin&eacute;.fr, 2008); earlier roles at Shakespeare Theatre of New
-	Jersey and Harper's Bazaar.
-</p>
+<ul>
+	<li>On-Air Strategic &amp; Media Planning @ Nickelodeon/Viacom (2010)</li>
+	<li>Festival Producer, Rendez-Vous with French Cinema at Lincoln Center @ UniFrance USA (2008-2010)</li>
+	<li>Entertainment Editor @ Screenrush.co.uk &amp; Allocin&eacute;.fr (2008)</li>
+	<li>
+		Associate Producer/French Fixer, <em>Blood, Sweat and Gears: Racing Clean to the Tour de
+		France</em> @ Sundance Channel (2008)
+	</li>
+	<li>Assistant to the Artistic Director @ Shakespeare Theatre of New Jersey (2006-2009)</li>
+	<li>Fashion Editorials Assistant @ Harper's Bazaar (2004-2005)</li>
+</ul>
 
 <hr />
 
 <h2>Awards</h2>
 <ul>
 	<li>
-		Emmy Award, Outstanding Creative Achievement in Interactive Media Multiplatform Storytelling
-		(2015) — <em>The Singles Project</em>, Bravo
-	</li>
-	<li>
-		Tribeca Film Festival, Spotlight Documentary (2017) — <em>The Year of the Scab</em>, ESPN 30
-		for 30
-	</li>
-	<li>
 		Cynopsis Short Form Video Festival Award (2018) — <em>Man Crafted</em> by Food Network &amp;
 		McCormick
 	</li>
 	<li>
-		New York Innovative Theatre Award nomination, Best Original Production (2016) —
+		Tribeca Film Festival - Spotlight Documentary (2017) — <em>The Year of the Scab</em>, ESPN 30
+		for 30
+	</li>
+	<li>
+		New York Innovative Theatre Award - Nominated, Best Original Production (2016) —
 		<em>Steel Birds</em> (director, EstroGenius Theatre Festival)
+	</li>
+	<li>
+		Emmy Award Outstanding Creative Achievement in Interactive Media Multiplatform Storytelling
+		(2015) — <em>The Singles Project</em>, Bravo
 	</li>
 </ul>
 
