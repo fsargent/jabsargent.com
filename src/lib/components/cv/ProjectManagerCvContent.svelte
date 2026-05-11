@@ -67,9 +67,8 @@
 	<span class="text-neutral-400">| 2026 - Present</span>
 </h2>
 <p>
-	Delivery lead executing TV-first and social-media video campaigns for Iris Worldwide
-	healthcare clients. Source and manage external vendors, and liaise with business leads,
-	creatives, strategists, finance, and clients.
+	Delivery lead on Iris's London healthcare account — TV-first and social-media campaigns from
+	brief through delivery.
 </p>
 <p class="text-sm text-neutral-400">
 	<strong>Clients:</strong> Alcon, Bayer, Convatech

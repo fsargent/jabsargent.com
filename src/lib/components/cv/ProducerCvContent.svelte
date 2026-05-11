@@ -113,9 +113,8 @@
 	<span class="text-neutral-400">| 2026 - Present</span>
 </h2>
 <p>
-	Producer on TV-first and social-media video campaigns for Iris's healthcare portfolio in London.
-	Source and manage external vendors, and liaise with business leads, creatives, strategists,
-	finance, and clients.
+	Producer on Iris's London healthcare account — TV-first and social-media campaigns from brief
+	through delivery.
 </p>
 <p class="text-sm text-neutral-400">
 	<strong>Clients:</strong>
@@ -128,9 +127,8 @@
 	<span class="text-neutral-400">| 2025 - 2026</span>
 </h2>
 <p>
-	Producer on the Kenvue consumer-health portfolio, executing TV-first and social-media video
-	campaigns across a multi-brand account. Sourced and managed external vendors, and liaised with
-	business leads, creatives, strategists, finance, and clients.
+	Producer on Kenvue's multi-brand consumer-health account — TV-first and social-media campaigns
+	across the brand portfolio.
 </p>
 <p class="text-sm text-neutral-400">
 	<strong>Clients:</strong>
@@ -142,8 +140,8 @@
 	<span class="text-neutral-400">| 2025</span>
 </h2>
 <p>
-	Content Development Producer who built marketing and communications campaigns for major brands.
-	Owned briefs, pitches, and deck development.
+	Content development producer building marketing and communications campaigns for major brands —
+	owned briefs, pitches, and deck development.
 </p>
 <p class="text-sm text-neutral-400">
 	<strong>Clients:</strong>
@@ -156,11 +154,8 @@
 	<span class="text-neutral-400">| 2024</span>
 </h2>
 <p>
-	Advertising Producer and Post Producer who executed video campaigns. Managed external vendors
-	and liaised with business leads, creatives, strategists, finance, and clients. Directed and
-	produced video series, maintaining high creative and production quality across all projects.
-	Established and communicated processes that supported production success and the team's
-	strategic vision.
+	Advertising producer and post producer on the Studios slate — directed and produced video
+	series and stood up the processes that kept the team's output predictable.
 </p>
 <p class="text-sm text-neutral-400">
 	<strong>Clients:</strong>
@@ -169,9 +164,8 @@
 
 <h2 id="freelance-2023">Video Producer/Director @ Freelance <span class="text-neutral-400">| 2023</span></h2>
 <p>
-	Video Producer and Director working in marketing, communications, and advertising. Wrote,
-	directed, produced, and post-produced high-quality content for brands. Specialized in
-	corporate storytelling and documentary-style production.
+	Video producer and director for brand marketing and communications — wrote, directed, and
+	post-produced. Specialized in corporate storytelling and documentary-style work.
 </p>
 <p class="text-sm text-neutral-400">
 	<strong>Clients:</strong>
@@ -183,10 +177,9 @@
 	<span class="text-neutral-400">| 2019 - 2022</span>
 </h2>
 <p>
-	Agency EP who produced social, broadcast, interactive, and earned-media assets for media
-	campaigns, internal communications, and other outputs. Sourced and managed external vendors,
-	and liaised with account teams and client contacts. Directed and produced video series,
-	maintaining high creative and production quality across all projects.
+	Agency EP producing social, broadcast, interactive, and earned-media work for brand and
+	corporate communications. Directed and produced ongoing video series across the agency's
+	account roster.
 </p>
 <p class="text-sm text-neutral-400">
 	<strong>Clients:</strong>
@@ -211,11 +204,8 @@
 	<span class="text-neutral-400">| 2016 - 2018</span>
 </h2>
 <p>
-	Oversaw award-winning digital series and branded content from pitch through delivery: wrote
-	scripts, outlines, breakdowns, and hotsheets; managed schedules and budgets; built and directed
-	production crews; cast and prepped talent; oversaw post-production and story; wrote voice-over;
-	booked and managed editors, colorists, and audio mixers; and managed client expectations and
-	deadlines throughout each project.
+	Award-winning digital series and branded content for the brand-publishing slate — wrote and
+	directed across short-form formats from pitch through delivery.
 </p>
 <p class="text-sm text-neutral-400">
 	<strong>Clients:</strong>
@@ -224,11 +214,8 @@
 
 <h2 id="tv-field-producer">TV Field Producer @ Freelance <span class="text-neutral-400">| 2009 - 2016</span></h2>
 <p>
-	Produced award-winning unscripted television series from development through delivery: wrote
-	scripts, outlines, breakdowns, and hotsheets; managed schedules and budgets; built crews; ran
-	casting and prepped talent; scouted and booked locations; directed talent and crew on set;
-	managed post-production; wrote voice-over and graphics copy; and executed against network notes
-	and deadlines.
+	Field-produced award-winning unscripted television for cable networks across reality,
+	competition, documentary, and lifestyle formats.
 </p>
 <p class="text-sm text-neutral-400">
 	<strong>Series / Networks:</strong> Car Hunters (History Channel), Island Life (HGTV), Beat Bobby
