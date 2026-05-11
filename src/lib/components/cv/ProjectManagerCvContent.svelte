@@ -11,9 +11,9 @@
 	repeatable processes matter.
 </p>
 <ul>
-	<li>Budgets managed: 30,000 - 800,000</li>
-	<li>Team sizes: 2 - 40 (cross-functional + vendors)</li>
-	<li>People management: direct manager for another producer (Edelman; Omnicom SF)</li>
+	<li>Budgets managed: $30,000 – $800,000</li>
+	<li>Team sizes: 2 – 40 (cross-functional plus vendors)</li>
+	<li>People management: line manager for a producer at Edelman and Omnicom SF</li>
 </ul>
 
 <h2>Role Focus</h2>
@@ -68,7 +68,7 @@
 	<span class="text-neutral-400">| 2026 - Present</span>
 </h2>
 <p>
-	Delivery lead executing TV-first and social media video campaigns for Iris Worldwide
+	Delivery lead executing TV-first and social-media video campaigns for Iris Worldwide
 	healthcare clients. Source and manage external vendors, and liaise with business leads,
 	creatives, strategists, finance, and clients.
 </p>
@@ -81,13 +81,13 @@
 	<span class="text-neutral-400">| 2025 - 2026</span>
 </h2>
 <p>
-	Delivery lead coordinating internal teams and external partners from intake through final
-	delivery.
+	Delivery lead who coordinated internal teams and external partners from intake through final
+	handoff.
 </p>
 <ul>
-	<li>Run project kickoffs, timelines, status updates, and approvals across stakeholders.</li>
-	<li>Manage vendor selection, SOWs, schedules, and budgets; keep scope changes explicit.</li>
-	<li>Keep work on-brief, deliverable, and unblocked; drive decisions to closure.</li>
+	<li>Ran project kickoffs, timelines, status updates, and approvals across stakeholders.</li>
+	<li>Managed vendor selection, SOWs, schedules, and budgets; kept scope changes explicit.</li>
+	<li>Kept work on-brief, deliverable, and unblocked; drove decisions to closure.</li>
 </ul>
 <p class="text-sm text-neutral-400">
 	<strong>Clients:</strong> Kenvue (Nicorette, OGX, Benylin, Sudafed, Calpol)
@@ -110,14 +110,14 @@
 	<span class="text-neutral-400">| 2024</span>
 </h2>
 <p>
-	Delivery lead responsible for executing projects and establishing process for reliable delivery
+	Delivery lead who executed projects and established repeatable processes for reliable delivery
 	across teams.
 </p>
 <ul>
-	<li>Own schedules, budget tracking, and delivery coordination across internal teams and vendors.</li>
-	<li>Lead day-to-day client communication, status, and approvals to keep work moving.</li>
-	<li>Stand up repeatable workflows so projects stay predictable under tight timelines.</li>
-	<li>Directly managed another producer; coach delivery habits and unblock work.</li>
+	<li>Owned schedules, budget tracking, and delivery coordination across internal teams and vendors.</li>
+	<li>Led day-to-day client communication, status, and approvals to keep work moving.</li>
+	<li>Stood up repeatable workflows so projects stayed predictable under tight timelines.</li>
+	<li>Line-managed another producer; coached delivery habits and unblocked work.</li>
 </ul>
 <p class="text-sm text-neutral-400">
 	<strong>Clients:</strong> Energy Upgrade California, Car Gurus, Expedia, BMW, Blue Moon, Cheetos
@@ -127,7 +127,7 @@
 	Senior Integrated Producer (Project Lead) @ adam&amp;eveDDB
 	<span class="text-neutral-400">| 2024</span>
 </h2>
-<p>Project lead balancing resourcing, schedules, and delivery needs across stakeholders.</p>
+<p>Project lead who balanced resourcing, schedules, and delivery needs across stakeholders.</p>
 
 <h2>
 	Project Lead (Content &amp; Communications) @ Freelance
@@ -144,14 +144,14 @@
 
 <h2>Executive Producer @ Edelman <span class="text-neutral-400">| 2019 - 2022</span></h2>
 <p>
-	Agency EP delivering social, broadcast, interactive, and earned media assets for campaigns and
-	internal communications.
+	Agency EP who delivered social, broadcast, interactive, and earned-media assets for campaigns
+	and internal communications.
 </p>
 <ul>
-	<li>Translate briefs into scopes, plans, budgets, and vendor workflows.</li>
-	<li>Manage delivery across account teams and client contacts; keep approvals and handoffs tight.</li>
-	<li>Maintain quality bar while balancing speed, constraints, and shifting priorities.</li>
-	<li>Directly managed another producer; prioritize workload and keep deadlines realistic.</li>
+	<li>Translated briefs into scopes, plans, budgets, and vendor workflows.</li>
+	<li>Managed delivery across account teams and client contacts; kept approvals and handoffs tight.</li>
+	<li>Maintained the quality bar while balancing speed, constraints, and shifting priorities.</li>
+	<li>Line-managed another producer; prioritised workload and kept deadlines realistic.</li>
 </ul>
 <p class="text-sm text-neutral-400">
 	<strong>Clients:</strong> eBay, Scholastic, PayPal, Eli Lilly, Dolby, Microsoft, Taco Bell &amp; TB
@@ -184,7 +184,7 @@
 <p class="text-sm text-neutral-400">
 	<strong>Series / Networks:</strong> Buying Naked (TLC), The Tim Ferriss Experiment (Turner), Secret
 	Wedding (TLC), Monsters Inside Me (Animal Planet), Deadly Ambition (Biography), Comedy Central
-	Presents:15 (Comedy Central), Car Hunters (History Channel), Island Life (HGTV), Beat Bobby Flay
+	Presents: 15 (Comedy Central), Car Hunters (History Channel), Island Life (HGTV), Beat Bobby Flay
 	(Food Network), The Singles Project (Bravo), Find My First Love (FYI), The Fall of '87 (ESPN 30
 	for 30)
 </p>
@@ -192,8 +192,8 @@
 <h2>Programming &amp; Development Coordinator @ A&amp;E Networks <span class="text-neutral-400">| 2010 - 2012</span></h2>
 <p class="text-sm text-neutral-400">
 	<strong>Series:</strong> Dance Moms, Abby's Ultimate Dance Competition, America's Most Wanted,
-	America's Supernanny, 24 Hour Catwalk, Russian Doll's, Roseanne's Nuts, Vanished with Beth
-	Holloway, Hef's Runaway Bride and Coming Home
+	America's Supernanny, 24 Hour Catwalk, Russian Dolls, Roseanne's Nuts, Vanished with Beth
+	Holloway, Hef's Runaway Bride, and Coming Home
 </p>
 
 <h3>Earlier Roles</h3>
@@ -219,8 +219,8 @@
 <p>
 	Drew University, American University of Paris<br />
 	BA Philosophy, BA French<br />
-	<em>Honors: Summa Cum Laude, Phi Beta Kappa Society &amp; National French Honor Society</em><br />
-	Languages: Fluent French, Conversational German/Italian
+	Honors: <em>summa cum laude</em>, Phi Beta Kappa Society, National French Honor Society<br />
+	Languages: French (fluent); German and Italian (conversational)
 </p>
 
 <h2>Awards</h2>
