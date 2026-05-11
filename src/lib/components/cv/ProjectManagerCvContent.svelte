@@ -64,6 +64,19 @@
 <hr />
 
 <h2>
+	Senior Integrated Producer (Project Lead) @ Iris Worldwide (London)
+	<span class="text-neutral-400">| 2026 - Present</span>
+</h2>
+<p>
+	Delivery lead executing TV-first and social media video campaigns for Iris Worldwide
+	healthcare clients. Source and manage external vendors, and liaise with business leads,
+	creatives, strategists, finance, and clients.
+</p>
+<p class="text-sm text-neutral-400">
+	<strong>Clients:</strong> Alcon, Bayer, Convatech
+</p>
+
+<h2>
 	Senior Integrated Producer (Project Lead) @ Omnicom Production (London)
 	<span class="text-neutral-400">| 2025 - 2026</span>
 </h2>

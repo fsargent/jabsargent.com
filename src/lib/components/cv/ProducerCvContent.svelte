@@ -3,6 +3,7 @@
 	import { clientSectionLinksByName } from '$lib/data/clients';
 
 	const companyLinks: Record<string, string> = {
+		'Iris Worldwide': 'https://www.iris-worldwide.com/',
 		'Omnicom Production': 'https://www.omnicomproduction.com/',
 		Parable: 'https://parableworks.com/',
 		'Omnicom Studios': 'https://www.omnicomproduction.com/',
@@ -12,6 +13,7 @@
 		'A&E Networks': 'https://www.aenetworks.com/'
 	};
 
+	const irisClients = ['Alcon', 'Bayer', 'Convatech'];
 	const omnicomProductionClients = ['Nicorette', 'OGX', 'Benylin', 'Sudafed', 'Calpol'];
 	const parableClients = ['Equinix', 'Cewe', 'Afreximbank', 'Kingfisher Beer', 'Spire'];
 	const omnicomStudiosClients = [
@@ -116,6 +118,21 @@
 </ul>
 
 <hr />
+
+<h2 id="iris-worldwide">
+	Senior Integrated Producer @
+	<a href={companyLinks['Iris Worldwide']} target="_blank" rel="noreferrer">Iris Worldwide</a>
+	<span class="text-neutral-400">| 2026 - Present</span>
+</h2>
+<p>
+	Advertising Producer responsible for executing TV first and social media video campaigns for
+	Iris Worldwide healthcare clients. Source and manage external vendors, and liaise with
+	business leads, creatives, strategists, finance and clients.
+</p>
+<p class="text-sm text-neutral-400">
+	<strong>Clients:</strong>
+	<ResumeClientList clients={irisClients} clientLinks={clientSectionLinksByName} />
+</p>
 
 <h2 id="omnicom-production">
 	Senior Integrated Producer @
