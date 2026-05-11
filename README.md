@@ -2,7 +2,7 @@
 
 Portfolio site for Jennifer Bronstein Sargent — Producer, Project Manager.
 
-Built with SvelteKit, Tailwind CSS, and deployed to Cloudflare Pages with video assets on Cloudflare R2.
+Built with SvelteKit, Tailwind CSS, and deployed to Cloudflare Workers (with static assets) and video assets on Cloudflare R2.
 
 ## Development
 
@@ -73,14 +73,12 @@ bun scripts/upload-to-r2.ts --videos-only
 
 ## Deployment
 
-The site deploys to Cloudflare Pages via Wrangler:
+The site deploys to Cloudflare Workers via Wrangler:
 
 ```bash
 bun run build
-bunx wrangler pages deploy .svelte-kit/cloudflare
+bunx wrangler deploy
 ```
-
-Or connect the repository to Cloudflare Pages for automatic deployments on push.
 
 ## Project Structure
 

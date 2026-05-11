@@ -1,9 +1,22 @@
 {
 	"$schema": "./node_modules/wrangler/config-schema.json",
 	"name": "jabsargent-com",
+	"main": ".svelte-kit/cloudflare/_worker.js",
 	"compatibility_date": "2026-02-14",
 	"compatibility_flags": ["nodejs_als", "nodejs_compat"],
-	"pages_build_output_dir": ".svelte-kit/cloudflare",
+	"workers_dev": false,
+	"preview_urls": true,
+	"routes": [
+		{ "pattern": "jabsargent.com", "custom_domain": true },
+		{ "pattern": "www.jabsargent.com", "custom_domain": true }
+	],
+	"assets": {
+		"binding": "ASSETS",
+		"directory": ".svelte-kit/cloudflare"
+	},
+	"observability": {
+		"enabled": true
+	},
 	"r2_buckets": [
 		{
 			"binding": "MEDIA",
