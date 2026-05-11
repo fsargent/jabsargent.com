@@ -67,8 +67,8 @@
 	<span class="text-neutral-400">| 2026 - Present</span>
 </h2>
 <p>
-	Delivery lead on Iris's London healthcare account — TV-first and social-media campaigns from
-	brief through delivery.
+	Delivery lead across Iris London's healthcare accounts. Digital OOH, TVC and social-first
+	campaigns.
 </p>
 <p class="text-sm text-neutral-400">
 	<strong>Clients:</strong> Alcon, Bayer, Convatech
