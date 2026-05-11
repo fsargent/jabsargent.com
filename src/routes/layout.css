@@ -23,6 +23,52 @@
 	display: none;
 }
 
+/* Screen typography for resume documents — tightened density.
+   Specificity (.resume-document.prose, 0,2,0) wins over Tailwind
+   typography's .prose :where(...) selectors (0,1,0). */
+.resume-document.prose :where(h2):not(:where([class~='not-prose'] *)) {
+	font-size: 1.35rem;
+	line-height: 1.25;
+	margin-top: 1.5em;
+	margin-bottom: 0.35em;
+	font-weight: 700;
+}
+
+.resume-document.prose :where(h3):not(:where([class~='not-prose'] *)) {
+	font-size: 1.05rem;
+	margin-top: 1.4em;
+	margin-bottom: 0.4em;
+}
+
+.resume-document.prose :where(h2 + p, h3 + p):not(:where([class~='not-prose'] *)) {
+	margin-top: 0;
+}
+
+.resume-document.prose :where(p):not(:where([class~='not-prose'] *)) {
+	margin-top: 0.6em;
+	margin-bottom: 0.6em;
+}
+
+/* Description paragraph + clients-line paragraph belong together visually. */
+.resume-document.prose :where(p + p):not(:where([class~='not-prose'] *)) {
+	margin-top: 0.35em;
+}
+
+.resume-document.prose :where(ul):not(:where([class~='not-prose'] *)) {
+	margin-top: 0.5em;
+	margin-bottom: 0.75em;
+}
+
+.resume-document.prose :where(li):not(:where([class~='not-prose'] *)) {
+	margin-top: 0.2em;
+	margin-bottom: 0.2em;
+}
+
+.resume-document.prose :where(hr):not(:where([class~='not-prose'] *)) {
+	margin-top: 1.75em;
+	margin-bottom: 1.5em;
+}
+
 @media print {
 	@page {
 		size: letter;

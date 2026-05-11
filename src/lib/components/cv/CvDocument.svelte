@@ -14,7 +14,7 @@
 	}
 </script>
 
-<div class="resume-document prose prose-invert mx-auto max-w-4xl">
+<div class="resume-document prose prose-invert mx-auto max-w-3xl">
 	<div class="print-only not-prose mb-3">
 		<h1 class="m-0 text-lg font-semibold">Jennifer Bronstein Sargent</h1>
 		<p class="m-0 text-sm">London, UK</p>
