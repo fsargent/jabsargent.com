@@ -17,6 +17,7 @@ export interface Category {
 }
 
 const vimeoTitlesById: Record<string, string> = {
+	"1210457463": "alcon_precision_v1 (1080p)",
 	"1033195256":
 		"24_EUC_FlexAlert_YC_Awareness_Social_Unplugging_Flex_Smarter_15_EN_9x16",
 	"1033195769":
@@ -120,6 +121,7 @@ const vimeoTitlesById: Record<string, string> = {
 };
 
 const polishedTitlesById: Record<string, string> = {
+	"1210457463": "Alcon - Precision",
 	"1033195256":
 		"Energy Upgrade California - Flex Alert: Unplugging (Social 15s)",
 	"1033195769": "Energy Upgrade California - Flex Alert: Dishes (Social 15s)",
@@ -163,8 +165,8 @@ const polishedTitlesById: Record<string, string> = {
 	"744664534": "Sacramento Mobile Crisis - Community Cut",
 	"744664758": "Sacramento Mobile Crisis - Recruitment Cut",
 	"757761340": "Gold Bond - IG Live Capture",
-	"776825788": "Gold Bond Creator Series - David Parody",
-	"776827346": "Gold Bond Creator Series - Super Duper Dani",
+	"776825788": "eBay Creator Series - David Parody",
+	"776827346": "eBay Creator Series - Super Duper Dani",
 	"782650321": "eBay Motors - Brand Spot (60s)",
 	"854446906": "REDF - Pitch Video",
 };
@@ -234,6 +236,11 @@ const videoContextById: Record<
 	string,
 	Pick<Video, "client" | "resumeRole" | "resumeAnchor">
 > = {
+	"1210457463": {
+		client: "Alcon",
+		resumeRole: "Senior Integrated Producer @ Iris Worldwide",
+		resumeAnchor: "iris-worldwide",
+	},
 	"1033195256": {
 		client: "Energy Upgrade California",
 		resumeRole: "Executive Producer @ Omnicom Studios",
@@ -371,6 +378,7 @@ export const categories: Category[] = [
 		description:
 			"I'm bringing my experience in television, film, documentary and branded content to the agency side. As a Creative Agency Producer I still write, direct and produce killer videos for various brands and I have the opportunity to craft stories from the internal messaging all the way to the campaign level. Plus I get to partner with world-class production partners, clients and agency creatives.",
 		videos: [
+			v("1210457463"),
 			v("1152864867"),
 			v("1152866104"),
 			v("1033195945"),
